@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: var(--font-montserrat), sans-serif;;
 }
+
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle infinite ease-in-out;
+}
