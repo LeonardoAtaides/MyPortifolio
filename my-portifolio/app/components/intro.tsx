@@ -147,7 +147,7 @@ const IntroMobile: React.FC<IntroProps> = ({ onFinish }) => {
           style={{
             top: "50%",
             left: "50%",
-            transform: `translate(calc(-50% - 20px - ${phase >= 2 ? "100px" : "0px"}), -50%)`,
+            transform: `translate(calc(-50% - 17px - ${phase >= 2 ? "95px" : "0px"}), -50%)`,
           }}
         >
           &lt;
@@ -161,7 +161,7 @@ const IntroMobile: React.FC<IntroProps> = ({ onFinish }) => {
           style={{
             top: "50%",
             left: "50%",
-            transform: `translate(calc(-50% + 20px + ${phase >= 2 ? "100px" : "0px"}), -50%)`,
+            transform: `translate(calc(-50% + 17px + ${phase >= 2 ? "95px" : "0px"}), -50%)`,
           }}
         >
           /&gt;
@@ -177,7 +177,6 @@ const IntroMobile: React.FC<IntroProps> = ({ onFinish }) => {
         >
           <h1 className="text-2xl font-bold tracking-wide uppercase text-white">
             {typedText}
-            <span className="animate-pulse">|</span>
           </h1>
         </div>
       </div>
