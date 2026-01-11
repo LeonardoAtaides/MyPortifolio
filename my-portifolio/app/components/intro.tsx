@@ -16,7 +16,7 @@ const IntroDesktop: React.FC<IntroProps> = ({ onFinish }) => {
   useEffect(() => {
     const t1 = setTimeout(() => setPhase(1), 500) // Tags appear
     const t2 = setTimeout(() => setPhase(2), 1500) // Tags split
-    const t3 = setTimeout(() => setPhase(3), 2500) // Text appears
+    const t3 = setTimeout(() => setPhase(3), 1500) // Text appears
 
     return () => {
       clearTimeout(t1)
@@ -58,7 +58,7 @@ const IntroDesktop: React.FC<IntroProps> = ({ onFinish }) => {
           style={{
             top: "50%",
             left: "50%",
-            transform: `translate(calc(-50% - 25px - ${phase >= 2 ? "190px" : "0px"}), -50%)`,
+            transform: `translate(calc(-50% - 25px - ${phase >= 2 ? "225px" : "0px"}), -50%)`,
           }}
         >
           &lt;
@@ -72,7 +72,7 @@ const IntroDesktop: React.FC<IntroProps> = ({ onFinish }) => {
           style={{
             top: "50%",
             left: "50%",
-            transform: `translate(calc(-50% + 25px + ${phase >= 2 ? "190px" : "0px"}), -50%)`,
+            transform: `translate(calc(-50% + 25px + ${phase >= 2 ? "225px" : "0px"}), -50%)`,
           }}
         >
           /&gt;
@@ -86,7 +86,7 @@ const IntroDesktop: React.FC<IntroProps> = ({ onFinish }) => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <h1 className="text-5xl font-bold tracking-wide uppercase text-white">
+          <h1 className="text-6xl font-bold tracking-wide uppercase text-white">
             {typedText}
           </h1>
         </div>
@@ -105,7 +105,7 @@ const IntroMobile: React.FC<IntroProps> = ({ onFinish }) => {
   useEffect(() => {
     const t1 = setTimeout(() => setPhase(1), 500)
     const t2 = setTimeout(() => setPhase(2), 1500)
-    const t3 = setTimeout(() => setPhase(3), 2500)
+    const t3 = setTimeout(() => setPhase(3), 1500)
 
     return () => {
       clearTimeout(t1)
@@ -141,13 +141,13 @@ const IntroMobile: React.FC<IntroProps> = ({ onFinish }) => {
       <div className="relative flex items-center justify-center w-full h-full">
         {/* Left tag element: < */}
         <div
-          className={`absolute text-4xl font-bold text-white transition-all duration-1000 ease-in-out ${
+          className={`absolute text-2xl font-bold text-white transition-all duration-1000 ease-in-out ${
             phase >= 1 ? "opacity-100" : "opacity-0"
           }`}
           style={{
             top: "50%",
             left: "50%",
-            transform: `translate(calc(-50% - 17px - ${phase >= 2 ? "95px" : "0px"}), -50%)`,
+            transform: `translate(calc(-50% - 11px - ${phase >= 2 ? "92px" : "0px"}), -50%)`,
           }}
         >
           &lt;
@@ -155,13 +155,13 @@ const IntroMobile: React.FC<IntroProps> = ({ onFinish }) => {
 
         {/* Right tag element: /> */}
         <div
-          className={`absolute text-4xl font-bold text-white transition-all duration-1000 ease-in-out ${
+          className={`absolute text-2xl font-bold text-white transition-all duration-1000 ease-in-out ${
             phase >= 1 ? "opacity-100" : "opacity-0"
           }`}
           style={{
             top: "50%",
             left: "50%",
-            transform: `translate(calc(-50% + 17px + ${phase >= 2 ? "95px" : "0px"}), -50%)`,
+            transform: `translate(calc(-50% + 11px + ${phase >= 2 ? "92px" : "0px"}), -50%)`,
           }}
         >
           /&gt;
