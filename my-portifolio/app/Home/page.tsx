@@ -19,17 +19,19 @@ export default function Home() {
 
       {/* NAVBAR */}
       <header className="w-full flex justify-center pt-6">
-        <div className="w-full max-w-7xl flex items-center justify-between px-8">
+        <div className="w-full max-w-7xl flex items-center justify-between px-8" >
           
           {/* Logo */}
+          <a href="#">
           <img
             src="/assets/Logo_a.png"
             alt="Logo"
             className="w-[54px] h-[41px]"
-          />
+          />            
+          </a>
 
           {/* Menu central */}
-          <nav className="flex items-center gap-12 bg-[#0F0F0F] px-10 py-3 rounded-full font-semibold text-sm tracking-wide">
+          <nav className="flex items-center gap-12 bg-[#0F0F0F] px-10 py-3  font-semibold text-sm tracking-wide rounded-full">
             <a href="#" className="hover:opacity-80 transition">
               SOBRE MIM
             </a>
@@ -42,14 +44,31 @@ export default function Home() {
           </nav>
 
           {/* Ações */}
-          <div className="flex items-center gap-6">
-            <Sun className="w-5 h-5 cursor-pointer hover:opacity-80 transition" />
-            <Globe className="w-5 h-5 cursor-pointer hover:opacity-80 transition" />
-
+          <div className="flex items-center gap-10">
+            <Sun className="w-6 h-6 cursor-pointer hover:opacity-80 transition" />
+            <Globe className="w-6 h-6 cursor-pointer hover:opacity-80 transition" />
           </div>
-
         </div>
+
       </header>
+        <div className=" flex flex-col justify-center font-bold text-center mt-40">
+            <h1 className="text-3xl text-center">Olá, me chamo Leonardo Ataídes</h1>
+            <div className="flex justify-center mt-5 text-xl">
+                <p className="text-justify w-210">
+                    Sou Desenvolvedor Front-End e Design, crio sites e landing pages que unem beleza, usabilidade e performance, transformo ideias em experiências digitais reais, destacando o que sua empresa ou marca tem de melhor para oferecer.
+                </p>
+            </div>
+            
+            <div className="flex justify-center gap-15 mt-10 items-center">
+            <a href="/cv-leonardo-ataides.pdf" download className="bg-[#0F0F0F] px-6 py-3 rounded-full transition duration-300 ease-out hover:scale-105 active:scale-95">
+                BAIXAR CV
+            </a>
+            <a href="https://wa.me/5561993992964" className="bg-[#0F0F0F] px-6 py-3 rounded-full transition duration-300 ease-out hover:scale-105 active:scale-95">
+                FALE COMIGO
+            </a>                    
+            </div>
+
+        </div>      
     </main>
   );
 }
