@@ -1,40 +1,55 @@
 "use client";
 import Intro from "../components/intro";
+import StarBackground from "../components/starbackground";
 import { useState } from "react";
-import { Globe, Moon, Sun  } from "lucide-react";
+import { Globe, Sun } from "lucide-react";
 
 export default function Home() {
-   const [showIntro, setShowIntro] = useState(true);
-   const handleIntroFinish = () => setShowIntro(false);
+  const [showIntro, setShowIntro] = useState(true);
+  const handleIntroFinish = () => setShowIntro(false);
 
   return (
-    
-    <main className="bg-black h-full w-full">
-          {showIntro && (
-        <div className="fixed inset-0 w-full h-full z-50">
+    <main className="min-h-screen w-full bg-black text-white z-10">
+    <StarBackground />
+      {showIntro && (
+        <div className="fixed inset-0 z-50">
           <Intro onFinish={handleIntroFinish} />
-        </div>)}
+        </div>
+      )}
 
-    <div className="flex justify-evenly pt-5 items-center gap-100">
-        <img
+      {/* NAVBAR */}
+      <header className="w-full flex justify-center pt-6">
+        <div className="w-full max-w-7xl flex items-center justify-between px-8">
+          
+          {/* Logo */}
+          <img
             src="/assets/Logo_a.png"
             alt="Logo"
             className="w-[54px] h-[41px]"
           />
 
-          <div className="flex justify-between bg-[#0F0F0F] text-white font-bold rounded-4xl p-3 px-8 gap-20 items-center">
-            <a href=""> SOBRE MIM</a>
-            <a href=""> PROJETOS</a>
-            <a href="">CONTATO</a>
+          {/* Menu central */}
+          <nav className="flex items-center gap-12 bg-[#0F0F0F] px-10 py-3 rounded-full font-semibold text-sm tracking-wide">
+            <a href="#" className="hover:opacity-80 transition">
+              SOBRE MIM
+            </a>
+            <a href="#" className="hover:opacity-80 transition">
+              PROJETOS
+            </a>
+            <a href="#" className="hover:opacity-80 transition">
+              CONTATO
+            </a>
+          </nav>
+
+          {/* Ações */}
+          <div className="flex items-center gap-6">
+            <Sun className="w-5 h-5 cursor-pointer hover:opacity-80 transition" />
+            <Globe className="w-5 h-5 cursor-pointer hover:opacity-80 transition" />
+
           </div>
 
-        <div className="flex justify-center gap-10 items-center">
-            <Globe className="w-6 h-6" />
-            <Sun className="w-6 h-6" />
         </div>
-           
-    </div>
-      
+      </header>
     </main>
   );
 }
