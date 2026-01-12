@@ -76,8 +76,18 @@ export default function Home() {
       </div>
 
       {/* Projetos */}
-      <h1 className="text-4xl pl-60">PROJETOS</h1>
-      <img src="/assets/CometaSuperior.svg" alt="" className="w-full h-200" />
+      <h1 className="text-4xl mt-10 pl-60 absolute">PROJETOS</h1>
+      
+      <div className="relative z-20 mt-10">
+      <img src="/assets/CometaSuperior.svg" alt="" className="w-full h-full" />
+      <div className="bg-[#0F0F0F] w-full h-auto"></div>
+      <img src="/assets/CometaInferior.svg" alt="" className="w-full h-full" />
+      </div>
+
+
+
+
+       
     </main>
   );
 }
