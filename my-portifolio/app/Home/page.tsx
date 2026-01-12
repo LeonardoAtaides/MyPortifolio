@@ -86,6 +86,7 @@ export default function Home() {
       <img src="/assets/CometaInferior.svg" alt="" className="w-full h-full" />
       </div>
 
+      {/* Sobre Mim */}
       <Titulo  tipo={1}/>
 
 
