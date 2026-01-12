@@ -1,6 +1,7 @@
 "use client";
 import Intro from "../components/intro";
 import StarBackground from "../components/starbackground";
+import Titulo from "../components/titles";
 import Lua from "../components/lua";
 import { useState } from "react";
 import { Globe, Sun } from "lucide-react";
@@ -76,13 +77,19 @@ export default function Home() {
       </div>
 
       {/* Projetos */}
-      <h1 className="text-4xl mt-10 pl-60 absolute">PROJETOS</h1>
-      
+      <Titulo  tipo={0}/>
       <div className="relative z-20 mt-10">
       <img src="/assets/CometaSuperior.svg" alt="" className="w-full h-full" />
-      <div className="bg-[#0F0F0F] w-full h-auto"></div>
+      <div className="bg-[#0F0F0F] w-full h-auto">
+        
+      </div>
       <img src="/assets/CometaInferior.svg" alt="" className="w-full h-full" />
       </div>
+
+      <Titulo  tipo={1}/>
+
+
+
 
 
 
