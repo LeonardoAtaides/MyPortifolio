@@ -3,6 +3,7 @@ import Intro from "../components/intro";
 import StarBackground from "../components/starbackground";
 import Titulo from "../components/titles";
 import Lua from "../components/lua";
+import ProjectsCarousel from "../components/projectcarrosel";
 import { useState } from "react";
 import { Globe, Sun } from "lucide-react";
 
@@ -78,16 +79,13 @@ export default function Home() {
 
       {/* Projetos */}
       <Titulo  tipo={0}/>
-      <div className="relative z-20 mt-10">
-      <img src="/assets/CometaSuperior.svg" alt="" className="w-full h-full" />
-      <div className="bg-[#0F0F0F] w-full h-auto">
-        
-      </div>
-      <img src="/assets/CometaInferior.svg" alt="" className="w-full h-full" />
-      </div>
+
+      <ProjectsCarousel />
+
+
 
       {/* Sobre Mim */}
-      <Titulo  tipo={1}/>
+   
 
 
 
