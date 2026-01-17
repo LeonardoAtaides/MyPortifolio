@@ -9,6 +9,7 @@ interface ProjectCardProps {
   backBg?: string
   shadowColor?: string
   link?: string
+  technologies?: string[]
 }
 
 export function ProjectCard({
@@ -18,19 +19,20 @@ export function ProjectCard({
   backBg = "#0B1E33",
   shadowColor = "rgba(255,255,255,0.15)",
   link,
+  technologies = [],
 }: ProjectCardProps) {
   const [face, setFace] = useState<0 | 1>(0)
 
   return (
     <div className="w-full max-w-sm">
-      {/*TITULO*/}
+      {/* ===== TÍTULO ===== */}
       <div className="mb-2">
         <h2 className="uppercase text-xl font-semibold text-white">
           {face === 0 ? title : "Informações"}
         </h2>
       </div>
 
-      {/*CARD*/}
+      {/* ===== CARD ===== */}
       <div
         className="relative overflow-hidden rounded-xl bg-[#0F0F0F]"
         style={{ boxShadow: `0 0 6px ${shadowColor}` }}
@@ -39,7 +41,7 @@ export function ProjectCard({
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${face * 100}%)` }}
         >
-          {/*CAPA DO CARD*/}
+          {/* -- CAPA CARD --*/}
           <div className="min-w-full h-[420px]">
             {link ? (
               <a
@@ -63,17 +65,46 @@ export function ProjectCard({
             )}
           </div>
 
-          {/*DESCRIÇÃO*/}
+          {/* -- DESCRIÇÃO CARD --*/}
           <div
-            className="min-w-full h-[420px] p-5 text-white/90 cursor-default select-text"
+            className="min-w-full h-[420px] p-5 text-white/90 flex flex-col justify-between"
             style={{ backgroundColor: backBg }}
           >
-            <p className="text-sm leading-relaxed">{description}</p>
+            {/* Descrição */}
+            <p className="text-sm leading-relaxed text-justify">
+              {description}
+            </p>
+
+            {/* Tecnologias */}
+            {technologies.length > 0 && (
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Tecnologias usadas:
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="
+                        px-3 py-1 text-xs font-semibold uppercase
+                        rounded-full
+                        bg-white/15 text-white
+                        backdrop-blur-sm
+                        border border-white/20
+                      "
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      {/*PASSADORES*/}
+      {/* ===== INDICADORES ===== */}
       <div className="flex justify-center gap-2 mt-3">
         {[0, 1].map((i) => (
           <button
