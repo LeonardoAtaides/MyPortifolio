@@ -6,10 +6,12 @@ import Lua from "../components/lua";
 import ProjectsCarousel from "../components/projectcarrosel";
 import { useState } from "react";
 import { Globe, Sun } from "lucide-react";
+import AboutMe from "../components/abooutme";
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
   const handleIntroFinish = () => setShowIntro(false);
+  const [on, setOn] = useState<0 | 1>(0)
 
   return (
     <main className="min-h-screen w-full bg-black text-white z-10">
@@ -52,7 +54,6 @@ export default function Home() {
             <Globe className="w-6 h-6 cursor-pointer hover:opacity-80 transition" />
           </div>
         </div>
-
       </header>
 
       < Lua />
@@ -80,13 +81,19 @@ export default function Home() {
       {/* Projetos */}
       <Titulo  tipo={0}/>
 
+
       <ProjectsCarousel />
 
 
 
       {/* Sobre Mim */}
-   
+      < AboutMe />
 
+
+      <div className="mt-10">
+        oi
+      </div>
+      
 
 
 
