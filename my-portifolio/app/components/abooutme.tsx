@@ -4,23 +4,33 @@ import { useState } from "react"
 import Titulo from "../components/titles";
 import {
   SiPython,
-  SiHtml5,
-  SiMysql,
   SiGithub,
   SiGit,
   SiFigma,
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiNextdotjs,
+  SiJavascript
+
 } from "react-icons/si"
+import { Database, Code2 } from "lucide-react";
 
 export default function AboutMe() {
   const [on, setOn] = useState<0 | 1>(0)
 
   const Icons = [
-  { name: "Python", icon: SiPython },
-  { name: "HTML", icon: SiHtml5 },
-  { name: "MySQL", icon: SiMysql },
-  { name: "GitHub", icon: SiGithub },
-  { name: "Git", icon: SiGit },
-  { name: "Figma", icon: SiFigma },
+  { name: "PYTHON", icon: SiPython },
+  { name: "JAVASCRIPT", icon: SiJavascript },
+  { name: "HTML", icon: SiHtml5},
+  { name: "CSS", icon: SiCss3 }, 
+  { name: "MYSQL", icon: Database },
+  { name: "GITHUB", icon: SiGithub },
+  { name: "GIT", icon: SiGit },
+  { name: "FIGMA", icon: SiFigma },
+  { name: "REACT", icon: SiReact },
+  { name: "NEXT.JS", icon: SiNextdotjs },
+
   ]
 
   return (
@@ -64,8 +74,8 @@ export default function AboutMe() {
 
           {/* ===== FACE 2 — CERTIFICAÇÕES ===== */}
           <div className="min-w-full">
-            <div className="flex justify-center gap-30 items-center">
-                <div className="w-[341px] h-[327px] rounded-xl bg-[#0F0F0F] flex justify-center items-center">
+            <div className="flex justify-center gap-20 items-center">
+                <div className="w-[341px] h-[327px] rounded-xl bg-[#0F0F0F] flex justify-center items-center mr-26">
               <img
                 src="assets/gown.png"
                 alt="Certificações"
@@ -74,18 +84,27 @@ export default function AboutMe() {
             </div>
 
 
-              <div className="w-[520px]">
-                <div className="grid grid-cols-3 gap-4">
-                {Icons.map(({ name, icon: Icon }) => (
+              <div className="w-[905px]">
+                <div className="grid grid-cols-5 gap-4">
+                  {Icons.map(({ name, icon: Icon }) => (
                     <div
-                    key={name}
-                    className="
-                    w-[148px] h-[153px] p-2 rounded-xl flex justify-center items-center bg-[#0F0F0F]  text-white  transition duration-300 ease-out hover:scale-105 active:scale-105"
-                    title={name}
+                      key={name}
+                      className="
+                        w-[148px] h-[153px]
+                        rounded-xl
+                        bg-[#0F0F0F]
+                        text-white
+                        flex flex-col items-center justify-center
+                        gap-3
+                        transition duration-300 ease-out
+                        hover:scale-105 active:scale-105
+                      "
+                      title={name}
                     >
-                    <Icon size={60} />
+                      <Icon size={60} />
+                      <h2>{name}</h2>
                     </div>
-                ))}
+                  ))}
                 </div>
               </div>
             </div>
