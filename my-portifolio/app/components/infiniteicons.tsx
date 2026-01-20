@@ -32,7 +32,7 @@ export default function InfiniteIcons() {
     SiTailwindcss,
     Database,
     VscodePlain,
-    SiJavascript
+    SiJavascript,
   ];
 
   useEffect(() => {
