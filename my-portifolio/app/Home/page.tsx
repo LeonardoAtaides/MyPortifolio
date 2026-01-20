@@ -7,6 +7,7 @@ import ProjectsCarousel from "../components/projectcarrosel";
 import { useState } from "react";
 import { Globe, Sun } from "lucide-react";
 import AboutMe from "../components/abooutme";
+import InfiniteIcons from "../components/infiniteicons";
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
@@ -88,11 +89,14 @@ export default function Home() {
 
       {/* Sobre Mim */}
       < AboutMe />
+      < InfiniteIcons />
+
+      {/*Contato*/}
+      <Titulo  tipo={3}/>
+      <ProjectsCarousel />
 
 
-      <div className="mt-10">
-        oi
-      </div>
+
       
 
 

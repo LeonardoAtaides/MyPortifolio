@@ -14,7 +14,7 @@ import {
   SiJavascript
 
 } from "react-icons/si"
-import { Database, Code2 } from "lucide-react";
+import { Database} from "lucide-react";
 
 export default function AboutMe() {
   const [on, setOn] = useState<0 | 1>(0)
@@ -79,7 +79,7 @@ export default function AboutMe() {
               <img
                 src="assets/gown.png"
                 alt="Certificações"
-                className="w-60 h-auto"
+                className="w-60 h-auto "
               />
             </div>
 
@@ -97,7 +97,7 @@ export default function AboutMe() {
                         flex flex-col items-center justify-center
                         gap-3
                         transition duration-300 ease-out
-                        hover:scale-105 active:scale-
+                        hover:scale-105 active:scale-95
                       "
                       title={name}
                     >
