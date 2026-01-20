@@ -75,7 +75,7 @@ export default function AboutMe() {
           {/* ===== FACE 2 — CERTIFICAÇÕES ===== */}
           <div className="min-w-full">
             <div className="flex justify-center gap-20 items-center">
-                <div className="w-[341px] h-[327px] rounded-xl bg-[#0F0F0F] flex justify-center items-center mr-26">
+                <div className="w-[341px] h-[327px] rounded-xl bg-[#0F0F0F] flex justify-center items-center mr-24">
               <img
                 src="assets/gown.png"
                 alt="Certificações"
@@ -85,19 +85,19 @@ export default function AboutMe() {
 
 
               <div className="w-[905px]">
-                <div className="grid grid-cols-5 gap-4">
+                <div className="grid grid-cols-5 gap-4 ">
                   {Icons.map(({ name, icon: Icon }) => (
                     <div
                       key={name}
                       className="
-                        w-[148px] h-[153px]
+                        w-[150px] h-[150px]
                         rounded-xl
                         bg-[#0F0F0F]
                         text-white
                         flex flex-col items-center justify-center
                         gap-3
                         transition duration-300 ease-out
-                        hover:scale-105 active:scale-105
+                        hover:scale-105 active:scale-
                       "
                       title={name}
                     >
