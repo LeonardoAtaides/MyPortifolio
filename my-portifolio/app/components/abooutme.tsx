@@ -54,7 +54,7 @@ export default function AboutMe() {
                 className="w-[341px] h-auto rounded-xl"
               />
 
-              <div className="w-[1005px] text-justify text-white/90">
+              <div className="w-[1005px] text-justify">
                 <p>
                   Atualmente, sou estudante do curso de Ciências da Computação no
                   CEUB, tenho 20 anos e sou apaixonado por transformar ideias em
