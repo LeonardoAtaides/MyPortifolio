@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Globe, Sun } from "lucide-react";
 import AboutMe from "../components/abooutme";
 import InfiniteIcons from "../components/infiniteicons";
+import Contact from "../components/contact";
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
@@ -93,7 +94,7 @@ export default function Home() {
 
       {/*Contato*/}
       <Titulo  tipo={3}/>
-      <ProjectsCarousel />
+      <Contact />
 
 
 
