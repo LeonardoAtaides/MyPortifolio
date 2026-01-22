@@ -11,7 +11,8 @@ import {
   SiReact,
   SiGit,
   SiTailwindcss,
-  SiJavascript
+  SiJavascript,
+  SiTypescript
 } from "react-icons/si";
 import { VscodePlain } from "devicons-react";
 import { Database } from "lucide-react";
@@ -33,6 +34,7 @@ export default function InfiniteIcons() {
     Database,
     VscodePlain,
     SiJavascript,
+    SiTypescript,
   ];
 
   useEffect(() => {
