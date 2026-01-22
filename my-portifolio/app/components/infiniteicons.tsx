@@ -38,7 +38,7 @@ export default function InfiniteIcons() {
       <div className="flex animate-marquee min-w-max">
         {[...icons, ...icons, ...icons].map((Icon, index) => (
           <span key={index} className="mx-8 text-white">
-            <Icon size={30} />
+            <Icon size={30} color="white" />
           </span>
         ))}
       </div>
