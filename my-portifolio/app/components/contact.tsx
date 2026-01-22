@@ -35,7 +35,7 @@ export default function Contact() {
       {/* CONTAINER SCROLL */}
       <div className="bg-[#0F0F0F] flex justify-center ">
         <div className="flex flex-col justify-center text-centet">
-        <h2 className="text-3xl w-220 text-jus m-6">E aí, despertou interesse no meu trabalho? Entre em contato comigo através das minhas redes sociais. Será um prazer conversar e transformar ideias em projetos!
+        <h2 className="text-3xl w-220 text-justify m-6">E aí, despertou interesse no meu trabalho? Entre em contato comigo através das minhas redes sociais. Será um prazer conversar e transformar ideias em projetos!
         </h2>
 
         <div className="flex justify-center gap-20 my-12">
