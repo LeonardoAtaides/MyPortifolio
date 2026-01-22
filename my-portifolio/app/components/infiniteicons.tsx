@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   SiPython,
@@ -34,13 +34,10 @@ const icons = [
 
 export default function InfiniteIcons() {
   return (
-    <div className="relative w-full overflow-hidden py-6 mt-14">
-      <div className="flex animate-marquee">
-        {[...icons, ...icons, ...icons, ...icons].map((Icon, index) => (
-          <span
-            key={index}
-            className="mx-6 inline-flex items-center justify-center text-white"
-          >
+    <div className="w-full overflow-hidden py-6 mt-14">
+      <div className="flex animate-marquee min-w-max">
+        {[...icons, ...icons, ...icons].map((Icon, index) => (
+          <span key={index} className="mx-8 text-white">
             <Icon size={30} />
           </span>
         ))}
