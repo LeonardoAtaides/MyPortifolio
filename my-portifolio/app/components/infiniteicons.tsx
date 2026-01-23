@@ -44,7 +44,7 @@ export default function InfiniteIcons() {
         <div className="flex animate-scroll-1 gap-16 px-4">
           {[...icons, ...icons, ...icons, ...icons].map((Icon, index) => (
             <div key={`a-${index}`} className="flex-shrink-0">
-              <Icon size={36} color="white" className="transition-all duration-500 hover:scale-125 hover:text-blue-400" />
+              <Icon size={36} color="white" />
             </div>
           ))}
         </div>
@@ -53,7 +53,7 @@ export default function InfiniteIcons() {
         <div className="flex animate-scroll-2 gap-16 px-4">
           {[...icons, ...icons, ...icons, ...icons].map((Icon, index) => (
             <div key={`b-${index}`} className="flex-shrink-0">
-              <Icon size={36} color="white" className="transition-all duration-500 hover:scale-125 hover:text-green-400" />
+              <Icon size={36} color="white" />
             </div>
           ))}
         </div>
@@ -70,21 +70,16 @@ export default function InfiniteIcons() {
         }
         
         .animate-scroll-1 {
-          animation: scroll 100s linear infinite;
+          animation: scroll 200s linear infinite;
           width: max-content;
         }
         
         .animate-scroll-2 {
-          animation: scroll 100s linear infinite;
+          animation: scroll 200s linear infinite;
           width: max-content;
           animation-delay: -50s; /* Começa no meio da animação */
         }
         
-        /* Quando pausar no hover */
-        .flex:hover .animate-scroll-1,
-        .flex:hover .animate-scroll-2 {
-          animation-play-state: paused;
-        }
       `}</style>
     </div>
   );
