@@ -34,7 +34,7 @@ const icons = [
 
 export default function InfiniteIcons() {
   return (
-    <div className="relative w-full overflow-hidden py-8 my-8">
+    <div className="relative w-full overflow-hidden py-8 mt-12">
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
       
