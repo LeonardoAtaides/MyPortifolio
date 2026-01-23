@@ -35,65 +35,55 @@ const icons = [
 export default function InfiniteIcons() {
   return (
     <div className="relative w-full overflow-hidden py-8 my-8">
-      {/* Gradiente nas bordas para esconder transição */}
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
       
-      {/* Contêiner principal com animação */}
-      <div className="flex animate-infinite-scroll gap-16 px-4">
-        {/* Primeira cópia */}
-        {icons.map((Icon, index) => (
-          <div 
-            key={`first-${index}`}
-            className="flex-shrink-0 transition-all duration-500 h hover:text-blue-400"
-          >
-            <Icon size={36} color="white" />
-          </div>
-        ))}
+      {/* Container com dupla animação para eliminar o pulo */}
+      <div className="flex">
+        {/* Primeira faixa */}
+        <div className="flex animate-scroll-1 gap-16 px-4">
+          {[...icons, ...icons, ...icons, ...icons].map((Icon, index) => (
+            <div key={`a-${index}`} className="flex-shrink-0">
+              <Icon size={36} color="white" className="transition-all duration-500 hover:scale-125 hover:text-blue-400" />
+            </div>
+          ))}
+        </div>
         
-        {/* Copy Two */}
-        {icons.map((Icon, index) => (
-          <div 
-            key={`second-${index}`}
-            className="flex-shrink-0 transition-all duration-500 h hover:text-green-400"
-          >
-            <Icon size={36} color="white" />
-          </div>
-        ))}
-        
-        {/* Copy Theree*/}
-        {icons.map((Icon, index) => (
-          <div 
-            key={`third-${index}`}
-            className="flex-shrink-0 transition-all duration-500 h hover:text-purple-400"
-          >
-            <Icon size={36} color="white" />
-          </div>
-        ))}
+        {/* Segunda faixa (offset) */}
+        <div className="flex animate-scroll-2 gap-16 px-4">
+          {[...icons, ...icons, ...icons, ...icons].map((Icon, index) => (
+            <div key={`b-${index}`} className="flex-shrink-0">
+              <Icon size={36} color="white" className="transition-all duration-500 hover:scale-125 hover:text-green-400" />
+            </div>
+          ))}
+        </div>
       </div>
 
       <style jsx>{`
-        @keyframes infinite-scroll {
+        @keyframes scroll {
           0% {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% / 3));
+            transform: translateX(-50%);
           }
         }
         
-        .animate-infinite-scroll {
-          display: flex;
+        .animate-scroll-1 {
+          animation: scroll 100s linear infinite;
           width: max-content;
-          animation: infinite-scroll 40s linear infinite;
         }
         
+        .animate-scroll-2 {
+          animation: scroll 100s linear infinite;
+          width: max-content;
+          animation-delay: -50s; /* Começa no meio da animação */
+        }
         
-        /* Para navegadores que suportam */
-        @supports (animation-timeline: scroll()) {
-          .animate-infinite-scroll {
-            animation-timeline: auto;
-          }
+        /* Quando pausar no hover */
+        .flex:hover .animate-scroll-1,
+        .flex:hover .animate-scroll-2 {
+          animation-play-state: paused;
         }
       `}</style>
     </div>
