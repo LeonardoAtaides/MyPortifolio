@@ -30,7 +30,7 @@ const socialLinks = [
 export default function Contact() {
   return (
     <footer className="relative z-20 mt-12">
-      <img src="/assets/CometaSuperior.svg" className="w-full" />
+     <img src="/assets/CometaSuperior.svg" className="w-full" />
 
       {/* CONTAINER SCROLL */}
       <div className="bg-[#0F0F0F] flex justify-center ">
