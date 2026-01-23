@@ -60,7 +60,7 @@ export default function LuaParallax() {
       }}
     >
       {/* Lua */}
-      <div className="relative w-8 h-8 rounded-full bg-[#eeecec]
+      <div className="relative w-8 h-8 rounded-full bg-[#ddd9d9]
         shadow-[0_0_70px_rgba(255,255,255,0.6)] overflow-hidden">
 
         {/* Manchas / crateras */}
