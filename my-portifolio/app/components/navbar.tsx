@@ -32,49 +32,45 @@ export default function Navbar() {
           </a>
         </nav>
 
-{/* Ações */}
-<div className="relative flex items-center gap-6">
-  <Sun className="w-6 h-6 cursor-pointer hover:opacity-80 transition" />
+        {/* Ações */}
+        <div className="relative flex items-center gap-6">
+        <Sun className="w-6 h-6 cursor-pointer hover:opacity-80 transition" />
 
-  {/* Idioma */}
-  <div className="relative">
-    {/* Globe */}
-    <Globe
-      className="w-6 h-6 cursor-pointer hover:opacity-80 transition relative z-10"
-      onClick={() => setOpenLang((prev) => !prev)}
-    />
+        {/* Idioma */}
+        <div className="relative">
+            {/* Globe */}
+            <Globe
+            className="w-6 h-6 cursor-pointer hover:opacity-80 transition relative z-10"
+            onClick={() => setOpenLang((prev) => !prev)}
+            />
 
-    {/* Menu flutuante */}
-    <div
-      className={`
-    absolute top-1/2 -translate-y-1/2
-    flex items-center gap-2
-    bg-[#0F0F0F] rounded-full
-    h-6 px-3 -py-1
-    transition-all duration-300 ease-out
-    ${openLang
-      ? "opacity-100 translate-x-0"
-      : "opacity-0 -translate-x-3 pointer-events-none"}
-  `}
-    >
-      {/* Espaço do Globe */}
-      <div className=" -ml-3 w-6 h-6" />
+            {/* Menu flutuante */}
+            <div
+            className={`
+            absolute top-1/2 -translate-y-1/2
+            flex items-center gap-2
+            bg-[#0F0F0F] rounded-full
+            h-6 px-3 -py-1
+            transition-all duration-300 ease-out
+            ${openLang
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 -translate-x-3 pointer-events-none"}
+        `}
+            >
+            {/* Espaço do Globe */}
+            <div className=" -ml-3 w-6 h-6" />
 
-      {/* Idiomas */}
-        <span className="font-bold text-sm cursor-pointer hover:opacity-80 transition leading-none">
-        PT
-        </span>
-        <span className="leading-none">|</span>
-        <span className="font-bold text-sm cursor-pointer hover:opacity-80 transition leading-none">
-        ENG
-        </span>
-    </div>
-  </div>
-</div>
-
-
-
-
+            {/* Idiomas */}
+                <span className="font-bold text-sm cursor-pointer hover:opacity-80 transition leading-none">
+                PT
+                </span>
+                <span className="leading-none">|</span>
+                <span className="font-bold text-sm cursor-pointer hover:opacity-80 transition leading-none">
+                ENG
+                </span>
+            </div>
+        </div>
+        </div>
 
       </div>
     </header>
