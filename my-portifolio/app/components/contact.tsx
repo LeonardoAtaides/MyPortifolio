@@ -46,7 +46,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             >
-            <Icon size={80} className="transition duration-300 ease-out
+            <Icon size={70} className="transition duration-300 ease-out
                         hover:scale-110 " />
             </a>
         ))}

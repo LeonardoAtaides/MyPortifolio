@@ -39,13 +39,13 @@ export default function Home() {
 
           {/* Menu central */}
           <nav className="flex items-center gap-12 bg-[#0F0F0F] px-10 py-3  font-semibold text-sm tracking-wide rounded-full">
-            <a href="#" className="hover:opacity-80 transition">
+            <a href="#aboutme" className="hover:opacity-80 transition">
               SOBRE MIM
             </a>
-            <a href="#" className="hover:opacity-80 transition">
+            <a href="#projects" className="hover:opacity-80 transition">
               PROJETOS
             </a>
-            <a href="#" className="hover:opacity-80 transition">
+            <a href="#contact" className="hover:opacity-80 transition">
               CONTATO
             </a>
           </nav>
@@ -61,7 +61,7 @@ export default function Home() {
       < Lua />
 
       {/* Apresentação */}
-      <div className=" relative z-10 flex flex-col justify-center font-bold text-center mt-40">
+      <div className=" relative z-10 flex flex-col justify-center font-bold text-center mt-40 pb-20">
         <h1 className="text-3xl text-center">Olá, me chamo Leonardo Ataídes</h1>
         <div className="flex justify-center mt-5 text-xl">
             <p className="text-justify w-210">
@@ -83,18 +83,22 @@ export default function Home() {
       {/* Projetos */}
       <Titulo  tipo={0}/>
 
-
-      <ProjectsCarousel />
-
-
+      <section id="projects" className="scroll-mt-26"> 
+        <ProjectsCarousel />
+      </section>
 
       {/* Sobre Mim */}
-      < AboutMe />
-      < InfiniteIcons />
+      <section id="aboutme" className="scroll-mt-20">
+        < AboutMe />
+        < InfiniteIcons />
+      </section>
 
       {/*Contato*/}
       <Titulo  tipo={3}/>
-      <Contact />
+      <section id="contact" className="scroll-mt-20">
+        <Contact />
+      </section>
+      
 
 
 

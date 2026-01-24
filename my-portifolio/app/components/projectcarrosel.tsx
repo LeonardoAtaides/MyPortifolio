@@ -48,7 +48,7 @@ const projects = [
 
 export default function ProjectsCarousel() {
   return (
-    <div className="relative z-20 mt-12">
+    <div className="relative z-20 mt-12 pb-20">
       <img src="/assets/CometaSuperior.svg" className="w-full" />
 
       {/* CONTAINER SCROLL */}
