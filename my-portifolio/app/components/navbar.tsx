@@ -29,7 +29,9 @@ export default function Navbar() {
         </a>
 
         {/* Menu central */}
-        <nav className="flex items-center gap-12 bg-[#0F0F0F] dark:bg-[#0F0F0F] px-10 py-3 font-semibold text-sm tracking-wide rounded-full">
+        <nav className="flex items-center gap-12 px-10 py-3 font-semibold text-sm tracking-wide rounded-full transition-colors duration-300 " style={{
+        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
+      }}>
           <a href="#aboutme" className="hover:opacity-80 transition">
             SOBRE MIM
           </a>
@@ -69,7 +71,6 @@ export default function Navbar() {
               className={`
                 absolute top-1/2 -translate-y-1/2
                 flex items-center gap-2
-                bg-[#0F0F0F] dark:bg-[#0F0F0F]
                 rounded-full
                 h-6 px-3
                 transition-all duration-300 ease-out
@@ -78,8 +79,10 @@ export default function Navbar() {
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-3 pointer-events-none"
                 }
-              `}
-            >
+              `} style={{
+        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
+      }}>
+            
               <div className="-ml-3 w-6 h-6" />
 
               <span className="font-bold text-sm cursor-pointer hover:opacity-80 transition leading-none">
