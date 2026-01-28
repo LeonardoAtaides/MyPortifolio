@@ -15,6 +15,7 @@ import {
 } from "react-icons/si";
 import { VscodePlain } from "devicons-react";
 import { Database } from "lucide-react";
+import { useTheme } from "next-themes"
 
 const icons = [
   SiPython,
@@ -33,14 +34,14 @@ const icons = [
 ];
 
 export default function InfiniteIcons() {
+  const { theme } = useTheme()
   return (
     <div className="relative w-full overflow-hidden py-8 mt-12 pb-20">
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"style={{background: `linear-gradient(to right, ${ theme === "dark" ? "#000" : "var(--bg-secundary)"}, transparent)`}}/>
+
+      <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"style={{background: `linear-gradient(to left, ${theme === "dark" ? "#000" : "var(--bg-secundary)"}, transparent)`}}/>
       
-      {/* Container com dupla animação para eliminar o pulo */}
       <div className="flex">
-        {/* Primeira faixa */}
         <div className="flex animate-scroll-1 gap-16 px-4">
           {[...icons, ...icons, ...icons, ...icons].map((Icon, index) => (
             <div key={`a-${index}`} className="flex-shrink-0">
@@ -48,8 +49,7 @@ export default function InfiniteIcons() {
             </div>
           ))}
         </div>
-        
-        {/* Segunda faixa (offset) */}
+
         <div className="flex animate-scroll-2 gap-16 px-4">
           {[...icons, ...icons, ...icons, ...icons].map((Icon, index) => (
             <div key={`b-${index}`} className="flex-shrink-0">

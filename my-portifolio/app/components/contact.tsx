@@ -6,6 +6,7 @@ import{
   SiGmail,
 } from "react-icons/si";
 import { useTheme } from "next-themes"
+
 const socialLinks = [
     {
         icon:  SiInstagram,
@@ -31,7 +32,7 @@ export default function Contact() {
   const { theme } = useTheme()
   return (
     <footer className="relative z-20 mt-12">
-     <img src="/assets/CometaSuperior.svg" className="w-full" />
+     <img src={ theme === "dark" ? "/assets/CometaSuperior.svg" : "/assets/CometaSuperiorVerde.svg"} className="w-full" />
 
       {/* CONTAINER SCROLL */}
       <div className="flex justify-center " style={{

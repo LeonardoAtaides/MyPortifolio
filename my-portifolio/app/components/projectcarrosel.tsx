@@ -51,10 +51,12 @@ export default function ProjectsCarousel() {
   const { theme} = useTheme()
   return (
     <div className="relative z-20 mt-12 pb-20">
-      <img src="/assets/CometaSuperior.svg" className="w-full" />
+      <img src={ theme === "dark" ? "/assets/CometaSuperior.svg" : "/assets/CometaSuperiorVerde.svg"}className="w-full" />
 
       {/* CONTAINER SCROLL */}
-      <div className="bg-[#0F0F0F] px-4" >
+      <div className="px-4"  style={{
+        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--earth)",
+      }}>
         <div className="flex justify-center gap-14 overflow-x-auto py-6 snap-x snap-mandatory scrollbar-hide"  style={{
         backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--earth)",
       }}>
@@ -66,7 +68,7 @@ export default function ProjectsCarousel() {
         </div>
       </div>
 
-      <img src="/assets/CometaInferior.svg" className="w-full" />
+      <img src={ theme === "dark" ? "/assets/CometaInferior.svg" : "/assets/CometaInferiorMarrom.svg"} className="w-full" /> 
     </div>
   )
 }
