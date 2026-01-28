@@ -45,9 +45,9 @@ export default function InfiniteIcons() {
   if (!mounted) return null
   return (
     <div className="relative w-full overflow-hidden py-8 mt-12 pb-20">
-      <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"style={{background: `linear-gradient(to right, ${ theme === "dark" ? "#000" : "var(--bg-secundary)"}, transparent)`}}/>
+      <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"style={{background: `linear-gradient(to right, ${ theme === "dark" ? "#000" : "var(--bg)"}, transparent)`}}/>
 
-      <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"style={{background: `linear-gradient(to left, ${theme === "dark" ? "#000" : "var(--bg-secundary)"}, transparent)`}}/>
+      <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"style={{background: `linear-gradient(to left, ${theme === "dark" ? "#000" : "var(--bg)"}, transparent)`}}/>
       
       <div className="flex">
         <div className="flex animate-scroll-1 gap-16 px-4">
