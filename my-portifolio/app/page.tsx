@@ -34,7 +34,6 @@ export default function Home() {
     {/* Presentation - Apresentação */}
     <Presentation />
 
-
     {/* Projects - Projetos */}
     <Titulo  tipo={0}/>
     <section id="projects" className="scroll-mt-26"> 

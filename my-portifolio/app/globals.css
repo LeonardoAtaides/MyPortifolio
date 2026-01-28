@@ -5,6 +5,11 @@
   --foreground: #171717;
 }
 
+.light{
+  --bg:linear-gradient(180deg, #0679B8, #034163);
+  --bg-secundary: #034163;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
