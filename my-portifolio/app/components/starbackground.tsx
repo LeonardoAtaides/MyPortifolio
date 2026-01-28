@@ -15,7 +15,10 @@ export default function StarBackground() {
   const { theme } = useTheme()
 
   useEffect(() => {
-    if (theme !== "dark") return
+    if (theme !== "dark") {
+      setStars([])
+      return
+    }
 
     const generatedStars = Array.from({ length: 30 }).map((_, i) => ({
       id: i,
@@ -30,8 +33,10 @@ export default function StarBackground() {
 
   return (
     <div
-      className="fixed inset-0 pointer-events-none transition-colors duration-700"
-      style={{ backgroundColor: "var(--bg)" }}
+      className="fixed inset-0 pointer-events-none transition-colors duration-700 -z-10"
+      style={{
+        backgroundColor: theme === "dark" ? "#000" : "var(--bg)",
+      }}
     >
       {theme === "dark" &&
         stars.map((star) => (

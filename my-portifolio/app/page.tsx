@@ -17,7 +17,7 @@ export default function Home() {
   const handleIntroFinish = () => setShowIntro(false);
 
   return (
-    <main className="min-h-screen w-full bg-black text-white z-10">
+    <main className="min-h-screen w-full  text-white z-10">
     <StarBackground />
       {showIntro && (
         <div className="fixed inset-0 z-50">
