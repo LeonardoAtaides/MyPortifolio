@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --foreground: #171717;
-}
+
 
 .light{
   --bg:#0679B8;
   --bg-secundary: #034163;
+  --earth: #3A2002;
 }
 
 @theme inline {

@@ -1,6 +1,7 @@
 "use client"
 
 import { ProjectCard } from "./projetccard"
+import { useTheme } from "next-themes"
 
 const projects = [
   {
@@ -47,13 +48,16 @@ const projects = [
 ]
 
 export default function ProjectsCarousel() {
+  const { theme} = useTheme()
   return (
     <div className="relative z-20 mt-12 pb-20">
       <img src="/assets/CometaSuperior.svg" className="w-full" />
 
       {/* CONTAINER SCROLL */}
-      <div className="bg-[#0F0F0F] px-4  ">
-        <div className="flex justify-center gap-14 overflow-x-auto py-6 snap-x snap-mandatory scrollbar-hide">
+      <div className="bg-[#0F0F0F] px-4" >
+        <div className="flex justify-center gap-14 overflow-x-auto py-6 snap-x snap-mandatory scrollbar-hide"  style={{
+        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--earth)",
+      }}>
           {projects.map((project, index) => (
             <div key={index} className="snap-start">
               <ProjectCard {...project} />
