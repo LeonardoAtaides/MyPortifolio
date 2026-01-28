@@ -1,4 +1,5 @@
 "use client"
+
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 
@@ -11,16 +12,23 @@ type Star = {
 }
 
 export default function StarBackground() {
-  const [stars, setStars] = useState<Star[]>([])
   const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const [stars, setStars] = useState<Star[]>([])
 
+  // Garante que só renderiza no cliente
   useEffect(() => {
-    if (theme !== "dark") {
+    setMounted(true)
+  }, [])
+
+  // Gera estrelas apenas no dark mode (APÓS mounted)
+  useEffect(() => {
+    if (!mounted || theme !== "dark") {
       setStars([])
       return
     }
 
-    const generatedStars = Array.from({ length: 30 }).map((_, i) => ({
+    const generatedStars: Star[] = Array.from({ length: 30 }).map((_, i) => ({
       id: i,
       top: Math.random() * 100,
       left: Math.random() * 100,
@@ -29,7 +37,9 @@ export default function StarBackground() {
     }))
 
     setStars(generatedStars)
-  }, [theme])
+  }, [theme, mounted])
+
+  if (!mounted) return null
 
   return (
     <div

@@ -6,6 +6,7 @@ import{
   SiGmail,
 } from "react-icons/si";
 import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 
 const socialLinks = [
     {
@@ -28,8 +29,17 @@ const socialLinks = [
     }
 ]
 
+
 export default function Contact() {
   const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+  setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
     <footer className="relative z-20 mt-12">
      <img src={ theme === "dark" ? "/assets/CometaSuperior.svg" : "/assets/CometaSuperiorVerde.svg"} className="w-full" />

@@ -1,7 +1,8 @@
 "use client"
 
-import { ProjectCard } from "./projetccard"
+import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
+import { ProjectCard } from "./projetccard"
 
 const projects = [
   {
@@ -12,7 +13,7 @@ const projects = [
     backBg: "#182C48",
     shadowColor: "rgba(24,44,72,0.8)",
     link: "https://www.vidracarianovohorizonte.com.br/home.html",
-    technologies: ["HTML", "CSS", "JAVASCRIPT", "FIGMA"]
+    technologies: ["HTML", "CSS", "JAVASCRIPT", "FIGMA"],
   },
   {
     image: "/assets/Project-MP.png",
@@ -22,44 +23,62 @@ const projects = [
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
     link: "https://mptelecom.com.br",
-    technologies: ["REACT", "TAILWIND", "JAVASCRIPT", "FIGMA"]
+    technologies: ["REACT", "TAILWIND", "JAVASCRIPT", "FIGMA"],
   },
   {
     image: "/assets/Project-Malvader.png",
     title: "Projeto Acadêmico",
     description:
-      "Este projeto acadêmico foi feito por mim e mais 3 colegas de classe, onde desenvolvemos um sistema bancário completo, de forma bem simples mais com um ótimo visual e focado na usabilidade, tento acesso de multinível um projeto totalmente completo.",
+      "Este projeto acadêmico foi feito por mim e mais 3 colegas de classe, onde desenvolvemos um sistema bancário completo, de forma bem simples mas com um ótimo visual e focado na usabilidade, tendo acesso multinível — um projeto totalmente completo.",
     backBg: "#034163",
-    shadowColor: "rgba(3,65,99,0.8)",    
-    link: "https://www.linkedin.com/posts/leonardo-ataides-a87a04273_mais-um-projeto-conclu%C3%ADdo-com-sucesso-activity-7401412714566246401-4cii?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELkCQcBJOV3ixqi502AeZ8ycw_tXu8yov8"  ,
-    technologies: ["NETX.JS", "TAILWIND", "TYPESCRIPT", "FIGMA", "MYSQL"]
+    shadowColor: "rgba(3,65,99,0.8)",
+    link: "https://www.linkedin.com/posts/leonardo-ataides-a87a04273_mais-um-projeto-conclu%C3%ADdo-com-sucesso-activity-7401412714566246401-4cii",
+    technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT", "FIGMA", "MYSQL"],
   },
-
-{
+  {
     image: "/assets/Project-UI.png",
     title: "UI / UX",
     description:
-      "Utilizo o Figma e minha principal ferramenta atualmente para desenvolver meus projetos de design e protótipos para os sites que vou desenvolver afim na hora de codar o site tem toda a estrutura pronta.",
+      "Utilizo o Figma como minha principal ferramenta atualmente para desenvolver projetos de design e protótipos, garantindo que toda a estrutura esteja pronta antes da codificação.",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
-    link: "https://www.figma.com/design/cYWeMd4vXrL2lPPn4JSdtj/GERAL-UX-E-UI?m=auto&t=bJ7S1YAyo2qfFLi9-1",
-    technologies: ["FIGMA", "PS TOUCH"]
+    link: "https://www.figma.com/design/cYWeMd4vXrL2lPPn4JSdtj/GERAL-UX-E-UI",
+    technologies: ["FIGMA", "PS TOUCH"],
   },
 ]
 
 export default function ProjectsCarousel() {
-  const { theme} = useTheme()
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // 🚨 evita hydration error
+  if (!mounted) return null
+
+  const bgColor = theme === "dark" ? "#0F0F0F" : "var(--earth)"
+
   return (
     <div className="relative z-20 mt-12 pb-20">
-      <img src={ theme === "dark" ? "/assets/CometaSuperior.svg" : "/assets/CometaSuperiorVerde.svg"}className="w-full" />
+      {/* COMETA SUPERIOR */}
+      <img
+        src={
+          theme === "dark"
+            ? "/assets/CometaSuperior.svg"
+            : "/assets/CometaSuperiorVerde.svg"
+        }
+        className="w-full"
+        alt="Cometa superior"
+      />
 
       {/* CONTAINER SCROLL */}
-      <div className="px-4"  style={{
-        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--earth)",
-      }}>
-        <div className="flex justify-center gap-14 overflow-x-auto py-6 snap-x snap-mandatory scrollbar-hide"  style={{
-        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--earth)",
-      }}>
+      <div className="px-4" style={{ backgroundColor: bgColor }}>
+        <div
+          className="flex justify-center gap-14 overflow-x-auto py-6 snap-x snap-mandatory scrollbar-hide"
+          style={{ backgroundColor: bgColor }}
+        >
           {projects.map((project, index) => (
             <div key={index} className="snap-start">
               <ProjectCard {...project} />
@@ -68,7 +87,16 @@ export default function ProjectsCarousel() {
         </div>
       </div>
 
-      <img src={ theme === "dark" ? "/assets/CometaInferior.svg" : "/assets/CometaInferiorMarrom.svg"} className="w-full" /> 
+      {/* COMETA INFERIOR */}
+      <img
+        src={
+          theme === "dark"
+            ? "/assets/CometaInferior.svg"
+            : "/assets/CometaInferiorMarrom.svg"
+        }
+        className="w-full"
+        alt="Cometa inferior"
+      />
     </div>
   )
 }

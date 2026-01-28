@@ -1,6 +1,5 @@
 "use client"
-
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Titulo from "../components/titles";
 import {
   SiPython,
@@ -19,6 +18,11 @@ import { useTheme } from "next-themes"
 
 export default function AboutMe() {
   const { theme} = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   const [on, setOn] = useState<0 | 1>(0)
 
   const Icons = [
@@ -34,6 +38,8 @@ export default function AboutMe() {
   { name: "NEXT.JS", icon: SiNextdotjs },
 
   ]
+
+   if (!mounted) return null
 
   return (
     <section className="w-full flex flex-col">
