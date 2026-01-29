@@ -44,6 +44,14 @@ export default function Contact() {
     <footer className="relative z-20 mt-12">
      <img src={ theme === "dark" ? "/assets/CometaSuperior.svg" : "/assets/CometaSuperiorVerde.svg"} className="w-full" />
 
+    {theme === "light" && (
+      <img
+        src="/assets/BarraVerde.svg"
+        className="w-full absolute "
+        alt="Barra verde"
+      />
+      )}
+
       {/* CONTAINER SCROLL */}
       <div className="flex justify-center " style={{
         backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--earth)",

@@ -73,6 +73,15 @@ export default function ProjectsCarousel() {
         alt="Cometa superior"
       />
 
+     {theme === "light" && (
+      <img
+        src="/assets/BarraVerde.svg"
+        className="w-full absolute "
+        alt="Barra verde"
+      />
+      )}
+
+
       {/* CONTAINER SCROLL */}
       <div className="px-4" style={{ backgroundColor: bgColor }}>
         <div
