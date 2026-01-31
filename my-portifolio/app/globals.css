@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
-
 .light{
   --bg:#0679B8;
   --bg-secundary: #034163;
@@ -22,6 +20,9 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--background);
