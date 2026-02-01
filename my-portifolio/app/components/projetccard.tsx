@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { useLanguage } from "@/app/context/language"
+import { translations } from "@/lib/translations"
 
 interface ProjectCardProps {
   image: string
@@ -21,6 +23,8 @@ export function ProjectCard({
   link,
   technologies = [],
 }: ProjectCardProps) {
+  const { language } = useLanguage()
+  const t = translations[language]
   const [face, setFace] = useState<0 | 1>(0)
 
   return (
@@ -28,7 +32,7 @@ export function ProjectCard({
       {/* ===== TÍTULO ===== */}
       <div className="mb-2">
         <h2 className="uppercase text-xl font-semibold text-white">
-          {face === 0 ? title : "Informações"}
+          {face === 0 ? title : t.card.title}
         </h2>
       </div>
 
@@ -71,7 +75,7 @@ export function ProjectCard({
             style={{ backgroundColor: backBg }}
           >
             {/* Descrição */}
-            <p className="text-sm leading-relaxed text-justify">
+            <p className="text-base leading-relaxed text-justify">
               {description}
             </p>
 
@@ -79,7 +83,7 @@ export function ProjectCard({
             {technologies.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  Tecnologias usadas:
+                  {t.card.subtitle}
                 </h3>
 
                 <div className="flex flex-wrap gap-2">

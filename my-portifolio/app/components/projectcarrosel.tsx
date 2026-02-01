@@ -3,13 +3,12 @@
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 import { ProjectCard } from "./projetccard"
+import { useLanguage } from "@/app/context/language"
+import { translations } from "@/lib/translations"
 
 const projects = [
-  {
+{
     image: "/assets/Project-NH.png",
-    title: "Landing Page",
-    description:
-      "Esta landing page foi desenvolvida para uma vidraçaria com o objetivo de apresentar sua história, serviços e canais de contato de forma clara e estratégica. O projeto contou com um design moderno e interativo, focado na usabilidade e na melhor experiência do usuário, facilitando a navegação e o acesso às informações.",
     backBg: "#182C48",
     shadowColor: "rgba(24,44,72,0.8)",
     link: "https://www.vidracarianovohorizonte.com.br/home.html",
@@ -17,9 +16,6 @@ const projects = [
   },
   {
     image: "/assets/Project-MP.png",
-    title: "Landing Page",
-    description:
-      "Esta landing page foi desenvolvida para uma empresa de fibra óptica, com o objetivo de apresentar seus serviços de forma clara e estratégica. O projeto conta com um design moderno e clean, focado em conversão, pensado para prender a atenção do visitante, estimular o interesse e conduzir o cliente à tomada de decisão de forma intuitiva e eficiente.",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
     link: "https://mptelecom.com.br",
@@ -27,22 +23,16 @@ const projects = [
   },
   {
     image: "/assets/Project-Malvader.png",
-    title: "Projeto Acadêmico",
-    description:
-      "Este projeto acadêmico foi feito por mim e mais 3 colegas de classe, onde desenvolvemos um sistema bancário completo, de forma bem simples mas com um ótimo visual e focado na usabilidade, tendo acesso multinível — um projeto totalmente completo.",
     backBg: "#034163",
     shadowColor: "rgba(3,65,99,0.8)",
-    link: "https://www.linkedin.com/posts/leonardo-ataides-a87a04273_mais-um-projeto-conclu%C3%ADdo-com-sucesso-activity-7401412714566246401-4cii",
-    technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT", "FIGMA", "MYSQL"],
+    link: "...",
+    technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT", "FIGMA", "MYSQL", "NODE.JS"],
   },
   {
     image: "/assets/Project-UI.png",
-    title: "UI / UX",
-    description:
-      "Utilizo o Figma como minha principal ferramenta atualmente para desenvolver projetos de design e protótipos, garantindo que toda a estrutura esteja pronta antes da codificação.",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
-    link: "https://www.figma.com/design/cYWeMd4vXrL2lPPn4JSdtj/GERAL-UX-E-UI",
+    link: "...",
     technologies: ["FIGMA", "PS TOUCH"],
   },
 ]
@@ -50,6 +40,8 @@ const projects = [
 export default function ProjectsCarousel() {
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const { language } = useLanguage()
+  const t = translations[language]
 
   useEffect(() => {
     setMounted(true)
@@ -90,7 +82,9 @@ export default function ProjectsCarousel() {
         >
           {projects.map((project, index) => (
             <div key={index} className="snap-start">
-              <ProjectCard {...project} />
+              <ProjectCard {...project}
+              title={t.projects[index].title}
+              description={t.projects[index].description} />
             </div>
           ))}
         </div>
