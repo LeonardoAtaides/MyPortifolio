@@ -59,3 +59,36 @@ body {
   animation: marquee 35s linear infinite;
   will-change: transform;
 }
+
+
+/* ===== Scroll (Chrome, Edge, Safari) ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Fundo */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb - LIGHT */
+::-webkit-scrollbar-thumb {
+  background: #2BA016;
+  border-radius: 999px;
+  transition: background 0.3s ease;
+}
+
+/* Hover light */
+::-webkit-scrollbar-thumb:hover {
+  background: #2BA016;
+}
+
+/* Thumb - DARK */
+.dark ::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Hover dark */
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
