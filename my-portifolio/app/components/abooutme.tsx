@@ -23,6 +23,10 @@ export default function AboutMe() {
   const [mounted, setMounted] = useState(false)
   const { language} = useLanguage()
   const t = translations[language]
+  const photoSrc =
+  theme === "dark"
+    ? "/assets/My-Photo.png"
+    : "/assets/My-Photo2.png"
 
 
   useEffect(() => {
@@ -61,10 +65,11 @@ export default function AboutMe() {
           {/* ===== FACE 1 — SOBRE MIM ===== */}
           <div className="min-w-full">
             <div className="flex justify-center gap-20 items-center">
-              <img
-                src="assets/My_Photo.png"
-                alt="Foto pessoal"
-                className="w-[341px] h-auto rounded-xl"
+
+             <img
+                src={photoSrc}
+                alt="Foto"
+                className="w-[341px] h-auto rounded-xl transition-opacity duration-300"
               />
 
               <div className="w-[1005px] text-justify">
