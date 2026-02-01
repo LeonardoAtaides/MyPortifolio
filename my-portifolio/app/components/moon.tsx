@@ -84,8 +84,6 @@ export default function Moon() {
   }, [])
 
   if (!mounted) return null
-
-  // Se não estiver visível, não renderiza
   if (!isVisible) return null
 
   return (
@@ -96,7 +94,7 @@ export default function Moon() {
         transform: `translate(-50%, ${offsetY}px)`,
       }}
     >
-      {/* 🌙 LUA — DARK */}
+      {/* LUA — DARK */}
       {theme === "dark" && (
         <div className="relative w-8 h-8 rounded-full bg-[#ddd9d9]
           shadow-[0_0_70px_rgba(255,255,255,0.6)] overflow-hidden">
@@ -106,7 +104,7 @@ export default function Moon() {
         </div>
       )}
 
-      {/* ☀️ SOL — LIGHT */}
+      {/* SOL — LIGHT */}
       {theme === "light" && (
         <div className="relative w-8 h-8 rounded-full bg-yellow-400
           shadow-[0_0_60px_rgba(255,200,0,0.8)]">
