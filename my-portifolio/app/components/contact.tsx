@@ -7,7 +7,8 @@ import{
 } from "react-icons/si";
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
-
+import { useLanguage } from "@/app/context/language"
+import { translations } from "@/lib/translations"
 const socialLinks = [
     {
         icon:  SiInstagram,
@@ -33,6 +34,8 @@ const socialLinks = [
 export default function Contact() {
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const { language} = useLanguage()
+  const t = translations[language]
 
   useEffect(() => {
   setMounted(true)
@@ -57,7 +60,7 @@ export default function Contact() {
         backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--earth)",
       }}>
         <div className="flex flex-col justify-center text-centet">
-        <h2 className="text-3xl w-220 text-justify m-6">E aí, despertou interesse no meu trabalho? Entre em contato comigo através das minhas redes sociais. Será um prazer conversar e transformar ideias em projetos!
+        <h2 className="text-3xl w-220 text-justify m-6">{t.contact.description}
         </h2>
 
         <div className="flex justify-center gap-20 my-12">
@@ -74,7 +77,7 @@ export default function Contact() {
         ))}
         </div>
 
-         <p className="text-center p-4">© 2026 – Ataídes Dev – Todos os direitos reservados</p> 
+         <p className="text-center p-4">{t.contact.copyright}</p> 
         </div>
 
         

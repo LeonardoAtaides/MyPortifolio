@@ -22,6 +22,10 @@ export const translations = {
     aboutme: {
         myhistory1:"Atualmente, sou estudante do curso de Ciências da Computação no CEUB, tenho 20 anos e sou apaixonado por transformar ideias em soluções úteis que gerem valor e impacto real. Me dedico e sempre busco evoluir por meio do estudo e da prática diária.",
         myhistory2:"Por meio de projetos freelancers já são mais de 4 desenvolvidos, sozinho e em colaboração sigo em constante busca por novos aprendizados com o objetivo de me tornar um desenvolvedor Full Stack, ampliando minha visão técnica e minha capacidade de entregar soluções completas."
+    },
+    contact:{
+        description:"E aí, despertou interesse no meu trabalho? Entre em contato comigo através das minhas redes sociais. Será um prazer conversar e transformar ideias em projetos!",
+        copyright:"© 2026 – Ataídes Dev – Todos os direitos reservados"
     }
   },
   en: {
@@ -45,6 +49,10 @@ export const translations = {
     aboutme: {
         myhistory1:"Currently, I am a Computer Science student at CEUB, I am 20 years old, and I am passionate about transforming ideas into useful solutions that generate real value and impact. I am dedicated and always strive to improve through study and daily practice.",
         myhistory2:"Through freelance projects, I have already developed more than 4, both alone and in collaboration. I am constantly seeking new learning opportunities with the goal of becoming a Full Stack developer, expanding my technical vision and my ability to deliver complete solutions."
+    },
+     contact:{
+        description:"So, did my work spark your interest? Get in touch with me through my social media. I'd love to chat and turn ideas into projects!",
+        copyright:"© 2026 – Ataídes Dev – All rights reserved"
     }
   },
 }
