@@ -3,11 +3,16 @@
 import { useState, useEffect } from "react"
 import { Sun, Globe, Moon } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useLanguage } from "@/app/context/language"
+import { translations } from "@/lib/translations"
 
 export default function Navbar() {
   const [openLang, setOpenLang] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+
+  const { language, setLanguage } = useLanguage()
+  const t = translations[language]
 
   useEffect(() => {
     setMounted(true)
@@ -29,17 +34,20 @@ export default function Navbar() {
         </a>
 
         {/* Menu central */}
-        <nav className="flex items-center gap-12 px-10 py-3 font-semibold text-sm tracking-wide rounded-full transition-colors duration-300 " style={{
-        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
-      }}>
-          <a href="#aboutme" className="hover:opacity-80 transition">
-            SOBRE MIM
+        <nav
+          className="flex items-center gap-12 px-10 py-3 font-semibold text-sm tracking-wide rounded-full transition-colors duration-300"
+          style={{
+            backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
+          }}
+        >
+          <a href="#aboutme" className="hover:opacity-80 transition uppercase">
+            {t.navbar.about}
           </a>
-          <a href="#projects" className="hover:opacity-80 transition">
-            PROJETOS
+          <a href="#projects" className="hover:opacity-80 transition uppercase">
+            {t.navbar.projects}
           </a>
-          <a href="#contact" className="hover:opacity-80 transition">
-            CONTATO
+          <a href="#contact" className="hover:opacity-80 transition uppercase">
+            {t.navbar.contact}
           </a>
         </nav>
 
@@ -79,18 +87,32 @@ export default function Navbar() {
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-3 pointer-events-none"
                 }
-              `} style={{
-        backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
-      }}>
-            
+              `}
+              style={{
+                backgroundColor:
+                  theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
+              }}
+            >
               <div className="-ml-3 w-6 h-6" />
 
-              <span className="font-bold text-sm cursor-pointer hover:opacity-80 transition leading-none">
+              <span
+                onClick={() => setLanguage("pt")}
+                className={`font-bold text-sm cursor-pointer transition leading-none ${
+                  language === "pt" ? "opacity-100" : "opacity-60 hover:opacity-80"
+                }`}
+              >
                 PT
               </span>
+
               <span className="leading-none">|</span>
-              <span className="font-bold text-sm cursor-pointer hover:opacity-80 transition leading-none">
-                ENG
+
+              <span
+                onClick={() => setLanguage("en")}
+                className={`font-bold text-sm cursor-pointer transition leading-none ${
+                  language === "en" ? "opacity-100" : "opacity-60 hover:opacity-80"
+                }`}
+              >
+                EN
               </span>
             </div>
           </div>

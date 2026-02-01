@@ -1,26 +1,26 @@
-"use client";
+"use client"
+
+import { useLanguage } from "@/app/context/language"
+import { translations } from "@/lib/translations"
+
 export interface TituloProps {
-  tipo: 0 | 1 | 2 | 3 ;
+  tipo: 0 | 1 | 2 | 3
 }
 
-// Definimos os títulos **depois** da interface
-const TITULOS: Record<TituloProps["tipo"], string> = {
-  0: "PROJETOS",
-  1: "SOBRE MIM",
-  2: "CERTIFICAÇÕES",
-  3: "CONTATO"
-};
-
 export default function Titulo({ tipo }: TituloProps) {
-  const texto = TITULOS[tipo];
+  const { language } = useLanguage()
+  const t = translations[language]
 
-  if (!texto) return <h2 className="text-gray-500">Título não encontrado</h2>;
+  const texto = t.titles[tipo]
 
-  const cor = tipo === 1 || tipo === 2 ? "text-white" : "text-[#fff]";
+  if (!texto)
+    return <h2 className="text-gray-500">Título não encontrado</h2>
+
+  const cor = tipo === 1 || tipo === 2 ? "text-white" : "text-[#fff]"
 
   return (
-    <h1 className={`text-4xl mt-10 pl-60 absolute uppercase${cor}`}>
+    <h1 className={`text-4xl mt-10 pl-60 absolute uppercase ${cor}`}>
       {texto}
     </h1>
-  );
+  )
 }
