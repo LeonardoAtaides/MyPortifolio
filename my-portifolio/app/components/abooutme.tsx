@@ -1,6 +1,8 @@
 "use client"
 import { useEffect, useState } from "react"
 import Titulo from "../components/titles";
+import { useLanguage } from "@/app/context/language"
+import { translations } from "@/lib/translations"
 import {
   SiPython,
   SiGithub,
@@ -19,6 +21,9 @@ import { useTheme } from "next-themes"
 export default function AboutMe() {
   const { theme} = useTheme()
   const [mounted, setMounted] = useState(false)
+  const { language} = useLanguage()
+  const t = translations[language]
+
 
   useEffect(() => {
     setMounted(true)
@@ -63,18 +68,11 @@ export default function AboutMe() {
               />
 
               <div className="w-[1005px] text-justify">
-                <p>
-                  Atualmente, sou estudante do curso de Ciências da Computação no
-                  CEUB, tenho 20 anos e sou apaixonado por transformar ideias em
-                  soluções úteis que gerem valor e impacto real. Me dedico e
-                  sempre busco evoluir por meio do estudo e da prática diária.
+                <p className="text-xl">
+                  {t.aboutme.myhistory1}
                   <br />
                   <br />
-                  Por meio de projetos freelancers já são mais de 4
-                  desenvolvidos, sozinho e em colaboração sigo em constante
-                  busca por novos aprendizados com o objetivo de me tornar um
-                  desenvolvedor Full Stack, ampliando minha visão técnica e
-                  minha capacidade de entregar soluções completas.
+                  {t.aboutme.myhistory2}
                 </p>
               </div>
             </div>
