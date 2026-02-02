@@ -27,7 +27,7 @@ export default function Presentation() {
       </h1>
 
       <div className="flex justify-center mt-5 text-xl">
-        <p className="text-justify text-lg sm:text-xl w-86 sm:w-210">
+        <p className="text-justify text-[17px] sm:text-xl w-80 sm:w-210">
           {t.presentation.description}
         </p>
       </div>
