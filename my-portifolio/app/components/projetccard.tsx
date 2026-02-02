@@ -28,15 +28,15 @@ export function ProjectCard({
   const [face, setFace] = useState<0 | 1>(0)
 
   return (
-    <div className="w-full max-w-sm">
-      {/* ===== TÍTULO ===== */}
+    <div className="w-[85vw] max-w-sm sm:w-full">
+      {/* TÍTULO */}
       <div className="mb-2">
         <h2 className="uppercase text-xl font-semibold text-white">
           {face === 0 ? title : t.card.title}
         </h2>
       </div>
 
-      {/* ===== CARD ===== */}
+      {/* CARD */}
       <div
         className="relative overflow-hidden rounded-xl bg-[#0F0F0F]"
         style={{ boxShadow: `0 0 6px ${shadowColor}` }}
@@ -45,14 +45,14 @@ export function ProjectCard({
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${face * 100}%)` }}
         >
-          {/* -- CAPA CARD --*/}
+          {/* CAPA */}
           <div className="min-w-full h-[420px]">
             {link ? (
               <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block h-full transition duration-300 ease-out hover:scale-105 active:scale-95 cursor-pointer"
+                className="block h-full transition duration-300 ease-out hover:scale-105 active:scale-95"
               >
                 <img
                   src={image}
@@ -69,17 +69,15 @@ export function ProjectCard({
             )}
           </div>
 
-          {/* -- DESCRIÇÃO CARD --*/}
+          {/* DESCRIÇÃO */}
           <div
             className="min-w-full h-[420px] p-5 text-white/90 flex flex-col justify-between"
             style={{ backgroundColor: backBg }}
           >
-            {/* Descrição */}
             <p className="text-base leading-relaxed text-justify">
               {description}
             </p>
 
-            {/* Tecnologias */}
             {technologies.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
@@ -108,14 +106,14 @@ export function ProjectCard({
         </div>
       </div>
 
-      {/* ===== INDICADORES ===== */}
+      {/* INDICADORES */}
       <div className="flex justify-center gap-2 mt-3">
         {[0, 1].map((i) => (
           <button
             key={i}
             onClick={() => setFace(i as 0 | 1)}
-            className={`h-[10px] w-4 rounded-full transition-all ${
-              face === i ? "bg-white w-10" : "bg-white/40"
+            className={`h-[10px] rounded-full transition-all ${
+              face === i ? "bg-white w-10" : "bg-white/40 w-4"
             }`}
           />
         ))}
