@@ -76,7 +76,7 @@ export default function Moon() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed top-24 inset-x-0 z-20 pointer-events-none">
+    <div className="fixed top-24 inset-x-0 z-10 pointer-events-none">
       <div className="flex justify-center items-start w-full h-0">
         <div
           ref={moonRef}
