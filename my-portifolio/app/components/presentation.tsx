@@ -26,13 +26,13 @@ export default function Presentation() {
         {t.presentation.title}
       </h1>
 
-      <div className="flex justify-center mt-5 text-xl">
-        <p className="text-justify text-[17px] sm:text-xl w-80 sm:w-210">
+      <div className="flex justify-center mt-5 m-8 sm:mt-5 sm:m-0 text-xl">
+        <p className="text-justify text-[17px] sm:text-xl w-210">
           {t.presentation.description}
         </p>
       </div>
 
-      <div className="flex justify-center gap-10 md:gap-15 mt-10 items-center">
+      <div className="flex justify-center gap-10 md:gap-15 sm:mt-10 items-center">
         <a
           href="/cv-leonardo-ataides.pdf"
           download
