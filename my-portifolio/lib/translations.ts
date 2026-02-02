@@ -14,7 +14,7 @@ export const translations = {
       contact: "Contato",
     },
     presentation: {
-      title: "Olá, me chamo Leonardo Ataídes",
+      title: "Olá, me chamo Ataídes",
       description: "Sou Desenvolvedor Front-End e Design, crio sites e landing pages que unem beleza, usabilidade e performance, transformo ideias em experiências digitais reais, destacando o que sua empresa ou marca tem de melhor para oferecer.",
       buttonone:"Baixar Cv",
       buttontwo:"Fale Comigo",
@@ -66,7 +66,7 @@ export const translations = {
       contact: "Contact",
     },
     presentation: {
-      title: "Hello, My name is Leonardo Ataídes",
+      title: "Hello, My name is Ataídes",
       description: "I am a Front-End Developer and Designer. I create websites and landing pages that combine beauty, usability, and performance, transforming ideas into real digital experiences, highlighting what your company or brand has to offer.",
       buttonone:"Download CV",
       buttontwo:"Talk To me",
