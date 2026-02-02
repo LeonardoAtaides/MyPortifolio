@@ -22,21 +22,21 @@ export default function Presentation() {
 
   return (
     <div className="relative z-10 flex flex-col justify-center font-bold text-center mt-40 pb-20">
-      <h1 className="text-3xl text-center">
+      <h1 className="text-2xl sm:text-3xl text-center">
         {t.presentation.title}
       </h1>
 
       <div className="flex justify-center mt-5 text-xl">
-        <p className="text-justify w-210">
+        <p className="text-justify text-lg sm:text-xl w-86 sm:w-210">
           {t.presentation.description}
         </p>
       </div>
 
-      <div className="flex justify-center gap-15 mt-10 items-center">
+      <div className="flex justify-center gap-10 md:gap-15 mt-10 items-center">
         <a
           href="/cv-leonardo-ataides.pdf"
           download
-          className="px-6 py-3 rounded-full transition duration-300 ease-out hover:scale-105 active:scale-95 uppercase"
+          className="w-38 sm:w-40 py-3 rounded-full transition duration-300 ease-out hover:scale-105 active:scale-95 uppercase"
           style={{ backgroundColor: buttonBg }}
         >
          {t.presentation.buttonone}
@@ -44,7 +44,7 @@ export default function Presentation() {
 
         <a
           href="https://wa.me/5561993992964"
-          className="px-6 py-3 rounded-full transition duration-300 ease-out hover:scale-105 active:scale-95 uppercase"
+          className="w-38 sm:w-40 py-3 rounded-full transition duration-300 ease-out hover:scale-105 active:scale-95 uppercase"
           style={{ backgroundColor: buttonBg }}
         >
           {t.presentation.buttontwo}
