@@ -47,7 +47,6 @@ export default function ProjectsCarousel() {
     setMounted(true)
   }, [])
 
-  // 🚨 evita hydration error
   if (!mounted) return null
 
   const bgColor = theme === "dark" ? "#0F0F0F" : "var(--earth)"
@@ -65,26 +64,48 @@ export default function ProjectsCarousel() {
         alt="Cometa superior"
       />
 
-     {theme === "light" && (
-      <img
-        src="/assets/BarraVerde.svg"
-        className="w-full absolute "
-        alt="Barra verde"
-      />
+      {theme === "light" && (
+        <img
+          src="/assets/BarraVerde.svg"
+          className="w-full absolute"
+          alt="Barra verde"
+        />
       )}
 
-
-      {/* CONTAINER SCROLL */}
-      <div className="px-4" style={{ backgroundColor: bgColor }}>
+      {/* CONTAINER DO CARROSSEL */}
+      <div className="px-2" style={{ backgroundColor: bgColor }}>
         <div
-          className="flex justify-center gap-14 overflow-x-auto py-6 snap-x snap-mandatory scrollbar-hide"
+          className="
+            flex
+            overflow-x-auto
+            snap-x snap-mandatory
+            scroll-smooth
+            gap-6
+            sm:gap-14
+            py-6
+            scrollbar-hide
+            justify-start
+            sm:justify-center
+          "
           style={{ backgroundColor: bgColor }}
         >
           {projects.map((project, index) => (
-            <div key={index} className="snap-start">
-              <ProjectCard {...project}
-              title={t.projects[index].title}
-              description={t.projects[index].description} />
+            <div
+              key={index}
+              className="
+                snap-center
+                flex-shrink-0
+                w-full
+                sm:w-auto
+                flex
+                justify-center
+              "
+            >
+              <ProjectCard
+                {...project}
+                title={t.projects[index].title}
+                description={t.projects[index].description}
+              />
             </div>
           ))}
         </div>
