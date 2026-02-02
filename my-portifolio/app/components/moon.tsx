@@ -40,7 +40,6 @@ export default function Moon() {
           
           const maxScrollDistance = projectsTop - INITIAL_TOP
           
-   
           let calculatedOffset = scrollY * PARALLAX_SPEED
 
           if (calculatedOffset >= maxScrollDistance) {
@@ -77,29 +76,33 @@ export default function Moon() {
   if (!isVisible) return null
 
   return (
-    <div
-      ref={moonRef}
-      className="fixed top-24 left-1/2 -translate-x-1/2 z-20 pointer-events-none transition-transform duration-100"
-      style={{
-        transform: `translate(-50%, ${offsetY}px)`,
-      }}
-    >
-      {/* LUA — DARK */}
-      {theme === "dark" && (
-        <div className="relative w-8 h-8 rounded-full bg-[#ddd9d9]
-          shadow-[0_0_70px_rgba(255,255,255,0.3)] overflow-hidden">
-          <span className="absolute top-1 left-1 w-2 h-2 rounded-full bg-black/10" />
-          <span className="absolute bottom-1 right-1 w-1.5 h-1.5 rounded-full bg-black/8" />
-          <span className="absolute top-3 right-2 w-1 h-1 rounded-full bg-black/12" />
-        </div>
-      )}
+    <div className="fixed top-24 inset-x-0 z-20 pointer-events-none">
+      <div className="flex justify-center items-start w-full h-0">
+        <div
+          ref={moonRef}
+          className="transition-transform duration-100"
+          style={{
+            transform: `translateY(${offsetY}px)`,
+          }}
+        >
+          {/* LUA — DARK */}
+          {theme === "dark" && (
+            <div className="relative w-8 h-8 rounded-full bg-[#ddd9d9]
+              shadow-[0_0_70px_rgba(255,255,255,0.3)] overflow-hidden">
+              <span className="absolute top-1 left-1 w-2 h-2 rounded-full bg-black/10" />
+              <span className="absolute bottom-1 right-1 w-1.5 h-1.5 rounded-full bg-black/8" />
+              <span className="absolute top-3 right-2 w-1 h-1 rounded-full bg-black/12" />
+            </div>
+          )}
 
-      {/* SOL — LIGHT */}
-      {theme === "light" && (
-        <div className="relative w-8 h-8 rounded-full bg-yellow-400
-          shadow-[0_0_60px_rgba(255,200,0,0.8)]">
+          {/* SOL — LIGHT */}
+          {theme === "light" && (
+            <div className="relative w-8 h-8 rounded-full bg-yellow-400
+              shadow-[0_0_60px_rgba(255,200,0,0.8)]">
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   )
 }
