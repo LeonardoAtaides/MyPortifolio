@@ -89,7 +89,7 @@ export default function Moon() {
   return (
     <div
       ref={moonRef}
-      className="fixed top-24 left-1/2 -translate-x-1/2 z-10 pointer-events-none transition-transform duration-100"
+      className="fixed top-24 left-1/2 -translate-x-1/2 z-20 pointer-events-none transition-transform duration-100"
       style={{
         transform: `translate(-50%, ${offsetY}px)`,
       }}
@@ -97,7 +97,7 @@ export default function Moon() {
       {/* LUA — DARK */}
       {theme === "dark" && (
         <div className="relative w-8 h-8 rounded-full bg-[#ddd9d9]
-          shadow-[0_0_70px_rgba(255,255,255,0.6)] overflow-hidden">
+          shadow-[0_0_70px_rgba(255,255,255,0.3)] overflow-hidden">
           <span className="absolute top-1 left-1 w-2 h-2 rounded-full bg-black/10" />
           <span className="absolute bottom-1 right-1 w-1.5 h-1.5 rounded-full bg-black/8" />
           <span className="absolute top-3 right-2 w-1 h-1 rounded-full bg-black/12" />
