@@ -57,23 +57,23 @@ export default function AboutMe() {
 
     
       {/* ===== CONTEÚDO ===== */}
-      <div className="relative overflow-hidden mt-26">
+      <div className="relative overflow-hidden mt-16 sm:mt-26">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${on * 100}%)` }}
         >
           {/* ===== FACE 1 — SOBRE MIM ===== */}
           <div className="min-w-full">
-            <div className="flex justify-center gap-20 items-center">
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
 
              <img
                 src={photoSrc}
                 alt="Foto"
-                className="w-[341px] h-auto rounded-xl transition-opacity duration-300"
+                className="w-[313px] sm:w-[341px] h-auto rounded-xl transition-opacity duration-300"
               />
 
-              <div className="w-[1005px] text-justify">
-                <p className="text-xl">
+              <div className="w-full sm:w-[1005px] text-justify">
+                <p className=" text-[17px] sm:text-xl mx-8 sm:mx-0 ">
                   {t.aboutme.myhistory1}
                   <br />
                   <br />
