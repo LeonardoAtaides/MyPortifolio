@@ -36,12 +36,12 @@ export default function Home() {
 
     {/* Projects - Projetos */}
     <Titulo  tipo={0}/>
-    <section id="projects" className="scroll-mt-26"> 
+    <section id="projects" className="scroll-mt-32 sm:scroll-mt-26"> 
       <ProjectsCarousel />
     </section>
 
     {/* About me - Sobre Mim */}
-    <section id="aboutme" className="scroll-mt-20">
+    <section id="aboutme" className="scroll-mt-14 sm:scroll-mt-20">
       < AboutMe />
       < InfiniteIcons />
     </section>

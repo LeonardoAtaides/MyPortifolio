@@ -221,18 +221,18 @@ export default function Navbar() {
       >
         <nav className="flex flex-col items-center gap-8 py-10 px-4 font-semibold text-lg tracking-wide">
           <a 
-            href="#aboutme" 
-            className="hover:opacity-80 transition uppercase w-full text-center py-3"
-            onClick={handleLinkClick}
-          >
-            {t.navbar.about}
-          </a>
-          <a 
-            href="#projects" 
+            href="#projects"
             className="hover:opacity-80 transition uppercase w-full text-center py-3"
             onClick={handleLinkClick}
           >
             {t.navbar.projects}
+          </a>
+          <a 
+             href="#aboutme" 
+            className="hover:opacity-80 transition uppercase w-full text-center py-3"
+            onClick={handleLinkClick}
+          >
+            {t.navbar.about}
           </a>
           <a 
             href="#contact" 
