@@ -28,7 +28,7 @@ export function ProjectCard({
   const [face, setFace] = useState<0 | 1>(0)
 
   return (
-    <div className="w-[85vw] max-w-sm sm:w-full">
+    <div className="w-[90vw] max-w-sm sm:w-full">
       {/* TÍTULO */}
       <div className="mb-2">
         <h2 className="uppercase text-xl font-semibold text-white">
@@ -107,13 +107,13 @@ export function ProjectCard({
       </div>
 
       {/* INDICADORES */}
-      <div className="flex justify-center gap-2 mt-3">
+      <div className="flex justify-center gap-2  mt-6 sm:mt-3">
         {[0, 1].map((i) => (
           <button
             key={i}
             onClick={() => setFace(i as 0 | 1)}
-            className={`h-[10px] rounded-full transition-all ${
-              face === i ? "bg-white w-10" : "bg-white/40 w-4"
+            className={` h-[14px] sm:h-[10px] rounded-full transition-all ${
+              face === i ? "bg-white w-14 sm:w-10" : "bg-white/40 w-4"
             }`}
           />
         ))}

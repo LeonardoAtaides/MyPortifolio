@@ -9,32 +9,32 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
-    image: "/assets/Project-NH.png",
-    backBg: "#182C48",
-    shadowColor: "rgba(24,44,72,0.8)",
-    link: "https://www.vidracarianovohorizonte.com.br/home.html",
-    technologies: ["HTML", "CSS", "JAVASCRIPT", "FIGMA"],
-  },
-  {
     image: "/assets/Project-MP.png",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
     link: "https://mptelecom.com.br",
     technologies: ["REACT", "TAILWIND", "JAVASCRIPT", "FIGMA"],
-  },
+  },  
   {
     image: "/assets/Project-Malvader.png",
     backBg: "#034163",
     shadowColor: "rgba(3,65,99,0.8)",
-    link: "...",
+    link: "https://www.linkedin.com/posts/leonardo-ataides-a87a04273_mais-um-projeto-conclu%C3%ADdo-com-sucesso-activity-7401412714566246401-4cii?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELkCQcBJOV3ixqi502AeZ8ycw_tXu8yov8",
     technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT", "FIGMA", "MYSQL", "NODE.JS"],
-  },
+  }, 
   {
     image: "/assets/Project-UI.png",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
-    link: "...",
+    link: "https://www.figma.com/design/cYWeMd4vXrL2lPPn4JSdtj/GERAL-UX-E-UI?m=auto&t=cQ7b7bqqziC2fWXp-6",
     technologies: ["FIGMA", "PS TOUCH"],
+  },   
+  {
+    image: "/assets/Project-NH.png",
+    backBg: "#182C48",
+    shadowColor: "rgba(24,44,72,0.8)",
+    link: "https://www.vidracarianovohorizonte.com.br/home.html",
+    technologies: ["HTML", "CSS", "JAVASCRIPT", "FIGMA"],
   },
 ]
 
