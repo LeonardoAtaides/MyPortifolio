@@ -134,8 +134,8 @@ export default function AboutMe() {
           <button
             key={i}
             onClick={() => setOn(i as 0 | 1)}
-            className={`h-[10px] w-4 rounded-full transition-all ${
-              on === i ? "bg-white w-20" : "bg-white/40"
+            className={`h-[14px] sm:h-[10px] w-4 rounded-full transition-all ${
+              on === i ? "bg-white w-14 sm:w-20" : "bg-white/40"
             }`}
           />
         ))}
