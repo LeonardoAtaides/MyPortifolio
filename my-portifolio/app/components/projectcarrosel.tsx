@@ -1,13 +1,14 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useTheme } from "next-themes"
 import { ProjectCard } from "./projetccard"
 import { useLanguage } from "@/app/context/language"
 import { translations } from "@/lib/translations"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
-{
+  {
     image: "/assets/Project-NH.png",
     backBg: "#182C48",
     shadowColor: "rgba(24,44,72,0.8)",
@@ -43,6 +44,8 @@ export default function ProjectsCarousel() {
   const { language } = useLanguage()
   const t = translations[language]
 
+  const carouselRef = useRef<HTMLDivElement | null>(null)
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -50,6 +53,26 @@ export default function ProjectsCarousel() {
   if (!mounted) return null
 
   const bgColor = theme === "dark" ? "#0F0F0F" : "var(--earth)"
+
+  const scrollNext = () => {
+    if (!carouselRef.current) return
+    const cardWidth =
+      carouselRef.current.firstElementChild?.clientWidth || 0
+    carouselRef.current.scrollBy({
+      left: cardWidth,
+      behavior: "smooth",
+    })
+  }
+
+  const scrollPrev = () => {
+    if (!carouselRef.current) return
+    const cardWidth =
+      carouselRef.current.firstElementChild?.clientWidth || 0
+    carouselRef.current.scrollBy({
+      left: -cardWidth,
+      behavior: "smooth",
+    })
+  }
 
   return (
     <div className="relative z-20 mt-12 pb-20">
@@ -75,6 +98,7 @@ export default function ProjectsCarousel() {
       {/* CONTAINER DO CARROSSEL */}
       <div className="px-2" style={{ backgroundColor: bgColor }}>
         <div
+          ref={carouselRef}
           className="
             flex
             overflow-x-auto
@@ -121,6 +145,37 @@ export default function ProjectsCarousel() {
         className="w-full"
         alt="Cometa inferior"
       />
+
+      {/* BOTÕES DE NAVEGAÇÃO */}
+      <div className="relative bottom-20 left-[70%]  z-50 flex gap-3">
+        <button
+          onClick={scrollPrev}
+          className="
+            w-11 h-11
+            rounded-full
+            bg-[#1b1b1b]
+            text-white
+            flex items-center justify-center
+            transition
+          "
+        >
+          <ChevronLeft size={22} />
+        </button>
+
+        <button
+          onClick={scrollNext}
+          className="
+            w-11 h-11
+            rounded-full
+           bg-[#1b1b1b]
+            text-white
+            flex items-center justify-center    
+            transition
+          "
+        >
+          <ChevronRight size={22} />
+        </button>
+      </div>
     </div>
   )
 }
