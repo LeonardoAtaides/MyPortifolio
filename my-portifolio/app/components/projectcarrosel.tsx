@@ -147,11 +147,11 @@ export default function ProjectsCarousel() {
       />
 
       {/* BOTÕES DE NAVEGAÇÃO */}
-      <div className="relative bottom-20 left-[70%]  z-50 flex gap-3">
+      <div className="relative bottom-16 left-[70%]  z-50 flex gap-3 lg:hidden">
         <button
           onClick={scrollPrev}
           className="
-            w-11 h-11
+            w-10 h-10
             rounded-full
             bg-[#1b1b1b]
             text-white
@@ -165,7 +165,7 @@ export default function ProjectsCarousel() {
         <button
           onClick={scrollNext}
           className="
-            w-11 h-11
+            w-10 h-10
             rounded-full
            bg-[#1b1b1b]
             text-white
