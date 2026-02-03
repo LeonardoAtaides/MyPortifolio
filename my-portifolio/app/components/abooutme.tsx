@@ -85,25 +85,26 @@ export default function AboutMe() {
 
           {/* ===== FACE 2 — CERTIFICAÇÕES ===== */}
           <div className="min-w-full">
-            <div className="flex justify-center gap-20 items-center">
-                <div className="w-[341px] h-[327px] rounded-xl flex justify-center items-center mr-24" style={{
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
+                <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px] rounded-xl flex justify-center items-center sm:mr-24" style={{
                 backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                 }}>
               <img
                 src="assets/gown.png"
                 alt="Certificações"
-                className="w-60 h-auto "
+                className="w-40 sm:w-60 h-auto "
               />
             </div>
 
 
-              <div className="w-[905px]">
-                <div className="grid grid-cols-5 gap-4 ">
+              <div className="w-full sm:w-[905px]">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 justify-items-center mx-8 sm:mx-0 ">
                   {Icons.map(({ name, icon: Icon }) => (
                     <div
                       key={name}
                       className="
-                        w-[150px] h-[150px]
+                        w-[100px] h-[77px]
+                        sm:w-[150px] sm:h-[150px]
                         rounded-xl
                         bg-[#0F0F0F]
                         text-white
@@ -117,8 +118,8 @@ export default function AboutMe() {
                       backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                       }}>
                     
-                      <Icon size={60} />
-                      <h2>{name}</h2>
+                      <Icon className="text-[35px] sm:text-[60px]" />
+                      <h2 className="text-xs sm:text-base">{name}</h2>
                     </div>
                   ))}
                 </div>
