@@ -134,6 +134,7 @@ export default function Navbar() {
           <a href="#aboutme" className="hover:opacity-80 transition uppercase">
             {t.navbar.about}
           </a>
+          
           <a href="#contact" className="hover:opacity-80 transition uppercase">
             {t.navbar.contact}
           </a>
