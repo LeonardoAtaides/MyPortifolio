@@ -128,11 +128,11 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-12 px-10 py-3 font-semibold text-sm tracking-wide rounded-full transition-colors duration-300"
           
         >
-          <a href="#aboutme" className="hover:opacity-80 transition uppercase">
-            {t.navbar.about}
-          </a>
           <a href="#projects" className="hover:opacity-80 transition uppercase">
             {t.navbar.projects}
+          </a>          
+          <a href="#aboutme" className="hover:opacity-80 transition uppercase">
+            {t.navbar.about}
           </a>
           <a href="#contact" className="hover:opacity-80 transition uppercase">
             {t.navbar.contact}
