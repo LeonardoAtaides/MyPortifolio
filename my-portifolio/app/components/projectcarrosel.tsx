@@ -105,11 +105,11 @@ export default function ProjectsCarousel() {
             snap-x snap-mandatory
             scroll-smooth
             gap-6
-            sm:gap-14
+            md:gap-14
             py-6
             scrollbar-hide
             justify-start
-            sm:justify-center
+            md:justify-center
           "
           style={{ backgroundColor: bgColor }}
         >
