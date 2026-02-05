@@ -86,7 +86,7 @@ const IntroDesktop: React.FC<IntroProps> = ({ onFinish }) => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <h1 className="text-6xl font-bold tracking-wide uppercase text-white">
+          <h1 className="md:text-[51px] lg:text-6xl font-bold tracking-wide uppercase text-white">
             {typedText}
           </h1>
         </div>
