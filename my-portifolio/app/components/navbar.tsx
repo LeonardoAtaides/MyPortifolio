@@ -142,10 +142,12 @@ export default function Navbar() {
 
         {/* Ações Desktop */}
         <div className="hidden md:flex items-center gap-6">
+
+
           {/* Toggle Theme */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="cursor-pointer hover:opacity-80 transition"
+            className="cursor-pointer hover:opacity-80 transition order-2"
             aria-label="Alternar tema"
           >
             {theme === "dark" ? (
@@ -158,22 +160,23 @@ export default function Navbar() {
           {/* Idioma */}
           <div className="relative">
             <Globe
-              className="w-6 h-6 cursor-pointer hover:opacity-80 transition relative z-10"
+              className="w-6 h-6 cursor-pointer hover:opacity-80 transition relative z-10 order-1"
               onClick={() => setOpenLang((prev) => !prev)}
             />
 
             {/* Menu flutuante */}
             <div
               className={`
-                absolute top-1/2 -translate-y-1/2
+                absolute top-full -right-[35px] mt-2
                 flex items-center gap-2
                 rounded-full
-                h-6 px-3
+                py-2 px-4
                 transition-all duration-300 ease-out
+                shadow-lg
                 ${
                   openLang
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-3 pointer-events-none"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-3 pointer-events-none"
                 }
               `}
               style={{
@@ -181,8 +184,6 @@ export default function Navbar() {
                   theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
               }}
             >
-              <div className="-ml-3 w-6 h-6" />
-
               <span
                 onClick={() => setLanguage("pt")}
                 className={`font-bold text-sm cursor-pointer transition leading-none ${
