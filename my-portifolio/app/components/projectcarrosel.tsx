@@ -100,16 +100,21 @@ export default function ProjectsCarousel() {
         <div
           ref={carouselRef}
           className="
-            flex
-            overflow-x-auto
-            snap-x snap-mandatory
-            scroll-smooth
-            gap-6
-            md:gap-14
-            py-6
-            scrollbar-hide
-            justify-start
-            md:justify-center
+          flex
+          xl:grid
+          xl:grid-cols-4
+          overflow-x-auto
+          xl:overflow-visible
+          snap-x snap-mandatory
+          xl:snap-none
+          scroll-smooth
+          gap-4
+          md:gap-14
+          xl:gap-0
+          py-6
+          scrollbar-hide
+          justify-start
+          xl:justify-between
           "
           style={{ backgroundColor: bgColor }}
         >
@@ -117,12 +122,13 @@ export default function ProjectsCarousel() {
             <div
               key={index}
               className="
-                snap-center
-                flex-shrink-0
-                w-full
-                sm:w-auto
-                flex
-                justify-center
+              snap-center
+              flex-shrink-0
+              w-full
+              md:w-[720px]
+              xl:w-auto
+              flex
+              justify-center
               "
             >
               <ProjectCard
