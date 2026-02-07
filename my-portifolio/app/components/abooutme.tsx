@@ -86,7 +86,8 @@ export default function AboutMe() {
           {/* ===== FACE 2 — CERTIFICAÇÕES ===== */}
           <div className="min-w-full">
             <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
-                <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px] rounded-xl flex justify-center items-center xl:mr-24" style={{
+                <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px]
+                md:w[600px] rounded-xl flex justify-center items-center xl:mr-24" style={{
                 backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                 }}>
               <img
@@ -120,7 +121,7 @@ export default function AboutMe() {
                       backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                       }}>
                     
-                      <Icon className="text-[35px] md:text-[40px] lg:text-[60px]" />
+                      <Icon size={40} className="size-[35px] md:size-[40px] lg:size-[60px]" />
                       <h2 className="text-xs md:text-[15px] lg:text-base">{name}</h2>
                     </div>
                   ))}
