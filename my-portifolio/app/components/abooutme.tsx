@@ -57,7 +57,7 @@ export default function AboutMe() {
 
     
       {/* ===== CONTEÚDO ===== */}
-      <div className="relative overflow-hidden mt-16 sm:mt-26">
+      <div className="relative overflow-hidden mt-16 sm:mt-26 md:mt-20">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${on * 100}%)` }}
@@ -122,7 +122,7 @@ export default function AboutMe() {
                       }}>
                     
                       <Icon size={40} className="size-[35px] md:size-[40px] lg:size-[60px]" />
-                      <h2 className="text-xs md:text-[15px] lg:text-base">{name}</h2>
+                      <h2 className="text-xs md:text-sm lg:text-base">{name}</h2>
                     </div>
                   ))}
                 </div>
