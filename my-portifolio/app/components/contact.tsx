@@ -73,7 +73,7 @@ export default function Contact() {
       >
         <div className="w-full flex flex-col items-center text-center">
           {/* Texto */}
-          <h2 className="text-[17px] sm:text-lg md:text-lg xl:text-3xl max-w-[90%] sm:max-w-[880px] text-justify m-8 sm:mx-8 sm:my-2 xl:m-0">
+          <h2 className="text-[17px] sm:text-lg md:text-lg lg:text-[22px] xl:text-3xl max-w-[90%] sm:max-w-[880px] text-justify m-8 sm:mx-8 sm:my-2 xl:m-0">
             {t.contact.description}
           </h2>
 
