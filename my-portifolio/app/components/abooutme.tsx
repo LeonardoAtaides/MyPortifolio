@@ -72,8 +72,8 @@ export default function AboutMe() {
                 className="w-[313px] sm:w-[341px] h-auto rounded-xl transition-opacity duration-300"
               />
 
-              <div className="w-full md:w-[1005px] text-justify">
-                <p className=" text-[17px] sm:text-lg md:text-xl mx-8 md:mx-0 ">
+              <div className="w-full lg:w-[1005px] text-justify">
+                <p className=" text-[17px] sm:text-lg md:text-xl mx-8 lg:mx-0 ">
                   {t.aboutme.myhistory1}
                   <br />
                   <br />
@@ -86,26 +86,27 @@ export default function AboutMe() {
           {/* ===== FACE 2 — CERTIFICAÇÕES ===== */}
           <div className="min-w-full">
             <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
-                <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px] rounded-xl flex justify-center items-center md:mr-24" style={{
+                <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px] rounded-xl flex justify-center items-center xl:mr-24" style={{
                 backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                 }}>
               <img
                 src="assets/gown.png"
                 alt="Certificações"
-                className="w-40 sm:w-50 md:w-60 h-auto "
+                className="w-40 sm:w-50 md:w-52 lg:w-60 h-auto "
               />
             </div>
 
 
-              <div className="w-full md:w-[905px]">
-                <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-5 gap-4 sm:gap-6 md:gap-4 justify-items-center mx-8 md:mx-0 ">
+              <div className="w-full xl:w-[905px]">
+                <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-5 gap-4 sm:gap-6 md:gap-4 justify-items-center mx-8 xl:mx-0 ">
                   {Icons.map(({ name, icon: Icon }) => (
                     <div
                       key={name}
                       className="
                         w-[100px] h-[77px]
                         sm:h-[100px]
-                        md:w-[150px] md:h-[150px]
+                        md:w-[120px] md:h-[120px]
+                        xl:w-[150px] xl:h-[150px]
                         rounded-xl
                         bg-[#0F0F0F]
                         text-white
@@ -119,8 +120,8 @@ export default function AboutMe() {
                       backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                       }}>
                     
-                      <Icon className="text-[35px] md:text-[60px]" />
-                      <h2 className="text-xs md:text-base">{name}</h2>
+                      <Icon className="text-[35px] md:text-[40px] lg:text-[60px]" />
+                      <h2 className="text-xs md:text-[15px] lg:text-base">{name}</h2>
                     </div>
                   ))}
                 </div>
