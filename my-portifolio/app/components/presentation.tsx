@@ -32,7 +32,7 @@ export default function Presentation() {
         </p>
       </div>
 
-      <div className="flex justify-center gap-10 sm:gap-12 md:gap-14 lg:gap-15 sm:mt-10 items-center">
+      <div className="flex justify-center gap-10 sm:gap-12 md:gap-14 lg:gap-15 sm:mt-10 md:mt-5 items-center">
         <a
           href="/cv-leonardo-ataides.pdf"
           download
