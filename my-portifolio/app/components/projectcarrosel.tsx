@@ -56,23 +56,28 @@ export default function ProjectsCarousel() {
 
   const scrollNext = () => {
     if (!carouselRef.current) return
-    const cardWidth =
-      carouselRef.current.firstElementChild?.clientWidth || 0
-    carouselRef.current.scrollBy({
-      left: cardWidth,
+
+    const container = carouselRef.current
+    const scrollAmount = container.clientWidth
+
+    container.scrollBy({
+      left: scrollAmount,
       behavior: "smooth",
     })
   }
 
   const scrollPrev = () => {
     if (!carouselRef.current) return
-    const cardWidth =
-      carouselRef.current.firstElementChild?.clientWidth || 0
-    carouselRef.current.scrollBy({
-      left: -cardWidth,
+
+    const container = carouselRef.current
+    const scrollAmount = container.clientWidth
+
+    container.scrollBy({
+      left: -scrollAmount,
       behavior: "smooth",
     })
   }
+
 
   return (
     <div className="relative z-20 mt-12 pb-20">
@@ -110,6 +115,7 @@ export default function ProjectsCarousel() {
           scroll-smooth
           gap-4
           md:gap-14
+          lg:gap-0
           xl:gap-0
           py-6
           scrollbar-hide
@@ -126,6 +132,7 @@ export default function ProjectsCarousel() {
               flex-shrink-0
               w-full
               md:w-[720px]
+              lg:w-1/2
               xl:w-auto
               flex
               justify-center
@@ -153,7 +160,7 @@ export default function ProjectsCarousel() {
       />
 
       {/* BOTÕES DE NAVEGAÇÃO */}
-      <div className="relative bottom-16 left-[70%]  z-50 flex gap-3 lg:hidden">
+      <div className="relative bottom-16 left-[70%]  z-50 flex gap-3 xl:hidden">
         <button
           onClick={scrollPrev}
           className="
