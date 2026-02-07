@@ -90,7 +90,8 @@ export default function Contact() {
                   className="
                     w-12 h-12
                     sm:w-[60px] sm:h-[60px]
-                    md:w-[70px] sm:h-[70px]
+                    md:w-[64px] md:h-[64px]
+                    xl:w-[70px] xl:h-[70px]
                     transition duration-300 ease-out
                     hover:scale-110
                   "
