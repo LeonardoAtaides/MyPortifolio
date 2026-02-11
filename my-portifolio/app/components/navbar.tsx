@@ -34,7 +34,7 @@ export default function Navbar() {
         {/* Logo - Esquerda */}
         <a href="#" className="z-50">
           <img
-            src="/assets/Logo_a.png"
+            src="./assets/Logo_a.png"
             alt="Logo"
             className="w-[54px] h-[41px]"
           />
