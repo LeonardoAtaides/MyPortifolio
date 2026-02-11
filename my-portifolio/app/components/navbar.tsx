@@ -36,7 +36,7 @@ export default function Navbar() {
           <img
             src="/assets/Logo.png"
             alt="Logo"
-            className="w-[44px] h-auto  sm:w-[54px] sm:h-[41px]"
+            className="w-[50px] h-auto  sm:w-[54px] sm:h-[41px]"
           />
         </a>
 
