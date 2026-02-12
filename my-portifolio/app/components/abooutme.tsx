@@ -25,8 +25,8 @@ export default function AboutMe() {
   const t = translations[language]
   const photoSrc =
   theme === "dark"
-    ? "/assets/I-dark.png"
-    : "/assets/I-light.png"
+    ? "/assets/My-Photo.png"
+    : "/assets/My-Photo2.png"
 
 
   useEffect(() => {
