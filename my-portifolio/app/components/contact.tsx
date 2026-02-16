@@ -73,12 +73,12 @@ export default function Contact() {
       >
         <div className="w-full flex flex-col items-center text-center">
           {/* Texto */}
-          <h2 className="text-[17px] sm:text-lg md:text-lg lg:text-[22px] xl:text-3xl max-w-[90%] sm:max-w-[880px] text-justify m-8 sm:mx-8 sm:my-2 xl:m-0">
+          <h2 className="text-[17px] sm:text-lg md:text-lg lg:text-[22px] xl:text-[26px] 2xl:text-3xl max-w-[90%] sm:max-w-[880px] text-justify m-8 sm:mx-8 sm:my-2 xl:m-5">
             {t.contact.description}
           </h2>
 
           {/* Ícones */}
-          <div className="flex justify-center gap-8 sm:gap-20 my-5 sm:my-8 md:my-10 lg:my-12">
+          <div className="flex justify-center gap-8 sm:gap-20 my-5 sm:my-8 md:my-10 lg:my-12 xl:my-10 2xl:my-12">
             {socialLinks.map(({ icon: Icon, href }, index) => (
               <a
                 key={index}
@@ -91,7 +91,8 @@ export default function Contact() {
                     w-12 h-12
                     sm:w-[60px] sm:h-[60px]
                     md:w-[64px] md:h-[64px]
-                    xl:w-[70px] xl:h-[70px]
+                    xl:w-[65px] xl:h-[65px]
+                    2xl:w-[70px] 2xl:h-[70px]
                     transition duration-300 ease-out
                     hover:scale-110
                   "
