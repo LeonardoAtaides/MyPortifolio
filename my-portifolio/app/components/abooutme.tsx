@@ -57,23 +57,23 @@ export default function AboutMe() {
 
     
       {/* ===== CONTEÚDO ===== */}
-      <div className="relative overflow-hidden mt-16 sm:mt-26 md:mt-20 lg:mt-24 xl:mt-20">
+      <div className="relative overflow-hidden mt-16 sm:mt-26 md:mt-20 lg:mt-24 xl:mt-22 2xl:mt-22">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${on * 100}%)` }}
         >
           {/* ===== FACE 1 — SOBRE MIM ===== */}
           <div className="min-w-full">
-            <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-20">
+            <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-12 2xl:gap-20">
 
              <img
                 src={photoSrc}
                 alt="Foto"
-                className="w-[313px] sm:w-[341px] h-auto rounded-xl transition-opacity duration-300"
+                className="w-[313px] sm:w-[341px] h-auto rounded-xl transition-opacity duration-300 xl:ml-53 2xl:ml-0"
               />
 
-              <div className="w-full xl:w-[1005px] text-justify">
-                <p className=" text-[17px] sm:text-lg md:text-xl mx-8 lg:mx-22 xl:mx-0 ">
+              <div className="w-full 2xl:w-[1005px] text-justify">
+                <p className=" text-[17px] sm:text-lg md:text-xl mx-8 lg:mx-22 xl:mx-0 xl:mr-54 2xl:mx-0 ">
                   {t.aboutme.myhistory1}
                   <br />
                   <br />
@@ -85,21 +85,21 @@ export default function AboutMe() {
 
           {/* ===== FACE 2 — CERTIFICAÇÕES ===== */}
           <div className="min-w-full">
-            <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-20">
+            <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-12 2xl:gap-20">
                 <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px]
-                md:w[600px] rounded-xl flex justify-center items-center xl:mr-24" style={{
+                md:w[600px] rounded-xl flex justify-center items-center xl:ml-54 2xl:ml-0 2xl:mr-24" style={{
                 backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                 }}>
               <img
                 src="assets/gown.png"
                 alt="Certificações"
-                className="w-40 sm:w-50 md:w-52 lg:w-54 xl:w-60 h-auto "
+                className="w-40 sm:w-50 md:w-52 lg:w-54 xl:w-56 2xl:w-60 h-auto "
               />
             </div>
 
 
-              <div className="w-full xl:w-[905px]">
-                <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-5 gap-4 sm:gap-6 md:gap-4 lg:gap-4 xl:gap-4 justify-items-center mx-8 lg:mx-22 xl:mx-0 ">
+              <div className="w-full xl:w-[670px] 2xl:w-[905px]">
+                <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-5 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 md:gap-4 lg:gap-4 xl:gap-10 2xl:gap-4 justify-items-center mx-8 lg:mx-22 xl:mx-0 xl:mr-54 2xl:mx-0 ">
                   {Icons.map(({ name, icon: Icon }) => (
                     <div
                       key={name}
@@ -108,7 +108,8 @@ export default function AboutMe() {
                         sm:h-[100px]
                         md:w-[120px] md:h-[120px]
                         lg:w-[120px] lg:h-[120px]
-                        xl:w-[150px] xl:h-[150px]
+                        xl:w-[115px] xl:h-[110px]
+                        2xl:w-[150px] 2xl:h-[150px]
                         rounded-xl
                         bg-[#0F0F0F]
                         text-white
@@ -122,8 +123,8 @@ export default function AboutMe() {
                       backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",
                       }}>
                     
-                      <Icon size={40} className="size-[35px] md:size-[40px] lg:size-[50px] xl:size-[60px]" />
-                      <h2 className="text-xs md:text-sm lg:text-base">{name}</h2>
+                      <Icon size={40} className="size-[35px] md:size-[40px] lg:size-[50px] xl:size-[38px] 2xl:size-[60px]" />
+                      <h2 className="text-xs md:text-sm lg:text-base xl:text-[15px] 2xl:text-base">{name}</h2>
                     </div>
                   ))}
                 </div>
