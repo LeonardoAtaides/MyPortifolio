@@ -106,17 +106,18 @@ export default function ProjectsCarousel() {
           ref={carouselRef}
           className="
           flex
-          xl:grid
-          xl:grid-cols-4
+          2xl:grid
+          2xl:grid-cols-4
           overflow-x-auto
-          xl:overflow-visible
+          2xl:overflow-visible
           snap-x snap-mandatory
-          xl:snap-none
+          2xl:snap-none
           scroll-smooth
           gap-4
           md:gap-14
           lg:gap-0
           xl:gap-0
+          2xl:gap-0
           py-6
           scrollbar-hide
           justify-start
@@ -133,7 +134,8 @@ export default function ProjectsCarousel() {
               w-full
               md:w-[720px]
               lg:w-1/2
-              xl:w-auto
+              xl:w-1/2
+              2xl:w-auto
               flex
               justify-center
               "
@@ -160,7 +162,7 @@ export default function ProjectsCarousel() {
       />
 
       {/* BOTÕES DE NAVEGAÇÃO */}
-      <div className="relative bottom-16 left-[70%]  z-50 flex gap-3 xl:hidden">
+      <div className="relative bottom-16 left-[70%] z-50 flex gap-3 2xl:hidden">
         <button
           onClick={scrollPrev}
           className="
