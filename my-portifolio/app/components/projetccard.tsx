@@ -26,6 +26,8 @@ export function ProjectCard({
   const { language } = useLanguage()
   const t = translations[language]
   const [face, setFace] = useState<0 | 1>(0)
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
   return (
     <div className="w-[90vw] max-w-sm sm:w-full">
@@ -40,6 +42,21 @@ export function ProjectCard({
       <div
         className="relative overflow-hidden rounded-xl bg-[#0F0F0F]"
         style={{ boxShadow: `0 0 6px ${shadowColor}` }}
+        onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
+        onTouchMove={(e) => setTouchEnd(e.touches[0].clientX)}
+        onTouchEnd={() => {
+        if (!touchStart || !touchEnd) return
+        const distance = touchStart - touchEnd
+        const minSwipeDistance = 50
+        if (distance > minSwipeDistance && face === 0) {
+          setFace(1)
+        }
+        if (distance < -minSwipeDistance && face === 1) {
+          setFace(0)
+        }
+        setTouchStart(null)
+        setTouchEnd(null)
+      }}
       >
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -50,6 +67,7 @@ export function ProjectCard({
             {link ? (
               <a
                 href={link}
+                draggable={false}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block h-full transition duration-300 ease-out hover:scale-105 active:scale-95"
@@ -57,6 +75,7 @@ export function ProjectCard({
                 <img
                   src={image}
                   alt={title}
+                  draggable={false}
                   className="w-full h-full object-cover"
                 />
               </a>
@@ -64,6 +83,7 @@ export function ProjectCard({
               <img
                 src={image}
                 alt={title}
+                draggable={false}
                 className="w-full h-full object-cover"
               />
             )}
