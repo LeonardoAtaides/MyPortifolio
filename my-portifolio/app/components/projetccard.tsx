@@ -29,6 +29,7 @@ export function ProjectCard({
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
+  
   return (
     <div className="w-[90vw] max-w-sm sm:w-full">
       {/* TÍTULO */}
@@ -43,7 +44,7 @@ export function ProjectCard({
         className="relative overflow-hidden rounded-xl bg-[#0F0F0F]"
         style={{ boxShadow: `0 0 6px ${shadowColor}` }}
         onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
-        onTouchMove={(e) => setTouchEnd(e.touches[0].clientX)}
+        onTouchMove={(e) => { if (touchStart === null) return setTouchEnd(e.touches[0].clientX)}}
         onTouchEnd={() => {
           if (touchStart === null || touchEnd === null) return
 
