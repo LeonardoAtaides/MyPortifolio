@@ -171,7 +171,7 @@ export default function ProjectsCarousel() {
             text-white
             flex items-center justify-center
             transition"
-        style={{backgroundColor: theme === "dark" ? "#1b1b1b" : "var(--bg-secundary)",}}>
+        style={{backgroundColor: theme === "dark" ? "#1b1b1b" : "#522D03",}}>
         <ChevronLeft size={22} />
         </button>
 
@@ -183,7 +183,7 @@ export default function ProjectsCarousel() {
             text-white
             flex items-center justify-center    
             transition"
-        style={{backgroundColor: theme === "dark" ? "#1b1b1b" : "var(--bg-secundary)",}}>  
+        style={{backgroundColor: theme === "dark" ? "#1b1b1b" : "#522D03",}}>  
         <ChevronRight size={22} />
         </button>
       </div>
