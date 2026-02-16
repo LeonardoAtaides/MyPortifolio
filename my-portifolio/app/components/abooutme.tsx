@@ -62,7 +62,7 @@ export default function AboutMe() {
       {/* ===== CONTEÚDO ===== */}
       <div className="relative overflow-hidden mt-16 sm:mt-26 md:mt-20 lg:mt-24 xl:mt-22 2xl:mt-22"
       onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
-      onTouchMove={(e) => {if (touchStart === null) return setTouchEnd(e.touches[0].clientX)}}
+      onTouchMove={(e) => setTouchEnd(e.touches[0].clientX)}
       onTouchEnd={() => {
         if (touchStart === null || touchEnd === null) return
 
@@ -162,7 +162,7 @@ export default function AboutMe() {
           <button
             key={i}
             onClick={() => setOn(i as 0 | 1)}
-            className={`h-[14px] sm:h-[10px] w-4 rounded-full transition-all ${
+            className={`h-[12px] sm:h-[10px] w-4 rounded-full transition-all ${
               on === i ? "bg-white w-14 sm:w-20" : "bg-white/40"
             }`}
           />
