@@ -108,11 +108,9 @@ export default function ProjectsCarousel() {
           flex
           2xl:grid
           2xl:grid-cols-4
-          overflow-x-auto
+          overflow-x-hidden
           2xl:overflow-visible
-          snap-x snap-mandatory
           2xl:snap-none
-          scroll-smooth
           gap-4
           md:gap-14
           lg:gap-0
