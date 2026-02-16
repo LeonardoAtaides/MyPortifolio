@@ -161,38 +161,30 @@ export default function ProjectsCarousel() {
         alt="Cometa inferior"
       />
 
-      {/* BOTÕES DE NAVEGAÇÃO */}
+      {/* BOTÕES DE NEXT */}
       <div className="relative bottom-16 left-[70%] z-50 flex gap-3 2xl:hidden">
         <button
           onClick={scrollPrev}
           className="
-            w-8 h-8
+            w-10 h-10
             rounded-full
-            bg-[#1b1b1b]
             text-white
             flex items-center justify-center
-            transition
-          "
-        style={{backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",}}
-        >
-          
-          <ChevronLeft size={22} />
+            transition"
+        style={{backgroundColor: theme === "dark" ? "#1b1b1b" : "var(--bg-secundary)",}}>
+        <ChevronLeft size={22} />
         </button>
 
         <button
           onClick={scrollNext}
           className="
-            w-8 h-8
+            w-10 h-10
             rounded-full
-           bg-[#1b1b1b]
             text-white
             flex items-center justify-center    
-            transition
-          "
-        style={{backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",}}
-        >
-          
-          <ChevronRight size={22} />
+            transition"
+        style={{backgroundColor: theme === "dark" ? "#1b1b1b" : "var(--bg-secundary)",}}>  
+        <ChevronRight size={22} />
         </button>
       </div>
     </div>
