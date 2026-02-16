@@ -19,7 +19,7 @@ export default function Titulo({ tipo }: TituloProps) {
   const cor = tipo === 1 || tipo === 2 ? "text-white" : "text-[#fff]"
 
   return (
-    <h1 className={`text-2xl sm:text-4xl mt-5 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 pl-8 sm:pl-20 md:pl-24 lg:pl-36 xl:pl-48 2xl:pl-60 absolute uppercase ${cor}`}>
+    <h1 className={`text-2xl sm:text-4xl mt-5 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 pl-8 sm:pl-20 md:pl-24 lg:pl-36 xl:pl-54 2xl:pl-60 absolute uppercase ${cor}`}>
       {texto}
     </h1>
   )
