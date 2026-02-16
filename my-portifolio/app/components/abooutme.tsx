@@ -33,6 +33,9 @@ export default function AboutMe() {
     setMounted(true)
   }, [])
   const [on, setOn] = useState<0 | 1>(0)
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
 
   const Icons = [
   { name: "PYTHON", icon: SiPython },
@@ -57,7 +60,26 @@ export default function AboutMe() {
 
     
       {/* ===== CONTEÚDO ===== */}
-      <div className="relative overflow-hidden mt-16 sm:mt-26 md:mt-20 lg:mt-24 xl:mt-22 2xl:mt-22">
+      <div className="relative overflow-hidden mt-16 sm:mt-26 md:mt-20 lg:mt-24 xl:mt-22 2xl:mt-22"
+      onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
+      onTouchMove={(e) => setTouchEnd(e.touches[0].clientX)}
+      onTouchEnd={() => {
+        if (touchStart === null || touchEnd === null) return
+
+        const distance = touchStart - touchEnd
+        const minSwipeDistance = 50
+
+        if (distance > minSwipeDistance && on === 0) {
+          setOn(1)
+        }
+
+        if (distance < -minSwipeDistance && on === 1) {
+          setOn(0)
+        }
+
+        setTouchStart(null)
+        setTouchEnd(null)
+      }}>
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${on * 100}%)` }}
