@@ -166,28 +166,32 @@ export default function ProjectsCarousel() {
         <button
           onClick={scrollPrev}
           className="
-            w-10 h-10
+            w-8 h-8
             rounded-full
             bg-[#1b1b1b]
             text-white
             flex items-center justify-center
             transition
           "
+        style={{backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",}}
         >
+          
           <ChevronLeft size={22} />
         </button>
 
         <button
           onClick={scrollNext}
           className="
-            w-10 h-10
+            w-8 h-8
             rounded-full
            bg-[#1b1b1b]
             text-white
             flex items-center justify-center    
             transition
           "
+        style={{backgroundColor: theme === "dark" ? "#0F0F0F" : "var(--bg-secundary)",}}
         >
+          
           <ChevronRight size={22} />
         </button>
       </div>

@@ -136,7 +136,7 @@ export function ProjectCard({
           <button
             key={i}
             onClick={() => setFace(i as 0 | 1)}
-            className={` h-[14px] sm:h-[10px] rounded-full transition-all ${
+            className={` h-[12px] sm:h-[10px] rounded-full transition-all ${
               face === i ? "bg-white w-14 sm:w-10" : "bg-white/40 w-4"
             }`}
           />
