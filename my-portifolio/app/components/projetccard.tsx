@@ -45,18 +45,22 @@ export function ProjectCard({
         onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
         onTouchMove={(e) => setTouchEnd(e.touches[0].clientX)}
         onTouchEnd={() => {
-        if (!touchStart || !touchEnd) return
-        const distance = touchStart - touchEnd
-        const minSwipeDistance = 50
-        if (distance > minSwipeDistance && face === 0) {
-          setFace(1)
-        }
-        if (distance < -minSwipeDistance && face === 1) {
-          setFace(0)
-        }
-        setTouchStart(null)
-        setTouchEnd(null)
-      }}
+          if (touchStart === null || touchEnd === null) return
+
+          const distance = touchStart - touchEnd
+          const minSwipeDistance = 50
+
+          if (distance > minSwipeDistance && face === 0) {
+            setFace(1)
+          }
+
+          if (distance < -minSwipeDistance && face === 1) {
+            setFace(0)
+          }
+
+          setTouchStart(null)
+          setTouchEnd(null)
+        }}
       >
         <div
           className="flex transition-transform duration-500 ease-in-out"
