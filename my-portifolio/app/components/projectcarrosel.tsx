@@ -95,7 +95,7 @@ export default function ProjectsCarousel() {
       {theme === "light" && (
         <img
           src="/assets/BarraVerde.svg"
-          className="absolute w-[100%]"
+          className="absolute w-[150%]"
           alt="Barra verde"
         />
       )}
