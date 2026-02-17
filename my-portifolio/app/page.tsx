@@ -24,14 +24,11 @@ export default function Home() {
           <Intro onFinish={handleIntroFinish} />
         </div>
       )}
-    
-    {/* NAVBAR */}
+  
     <Navbar />
-
-    {/* Monn - Lua*/}
+    
     < Moon />
 
-    {/* Presentation - Apresentação */}
     <Presentation />
 
     {/* Projects - Projetos */}
