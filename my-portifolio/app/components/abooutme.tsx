@@ -23,11 +23,6 @@ export default function AboutMe() {
   const [mounted, setMounted] = useState(false)
   const { language} = useLanguage()
   const t = translations[language]
-  const photoSrc =
-  theme === "dark"
-    ? "/assets/My-Photo.png"
-    : "/assets/My-Photo2.png"
-
 
   useEffect(() => {
     setMounted(true)
