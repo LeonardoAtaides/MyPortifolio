@@ -87,11 +87,14 @@ export default function AboutMe() {
           <div className="min-w-full">
             <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-12 2xl:gap-20">
 
-             <img
-                src={photoSrc}
-                alt="Foto"
-                className="w-[313px] sm:w-[341px] h-auto rounded-xl transition-opacity duration-300 xl:ml-53 2xl:ml-0"
-              />
+            <img
+              src="/assets/My-Photo.png"
+              alt="Foto"
+              loading="eager"
+              decoding="async"
+              className={`w-[313px] sm:w-[341px] h-auto rounded-xl transition-all duration-500
+              ${theme === "dark" ? "grayscale" : ""}`}
+            />
 
               <div className="w-full 2xl:w-[1005px] text-justify">
                 <p className=" text-[17px] sm:text-lg md:text-xl mx-8 lg:mx-22 xl:mx-0 xl:mr-54 2xl:mx-0 ">
@@ -136,7 +139,7 @@ export default function AboutMe() {
                         text-white
                         flex flex-col items-center justify-center
                         gap-3
-                        transition duration-300 ease-out
+                        transition duration-500 ease-out
                         hover:scale-105 active:scale-95
                       "
                       title={name}
