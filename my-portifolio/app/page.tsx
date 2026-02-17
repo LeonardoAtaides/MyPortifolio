@@ -31,19 +31,19 @@ export default function Home() {
 
     <Presentation />
 
-    {/* Projects - Projetos */}
+    {/* Projects*/}
     <Titulo  tipo={0}/>
     <section id="projects" className="scroll-mt-32 sm:scroll-mt-26"> 
       <ProjectsCarousel />
     </section>
 
-    {/* About me - Sobre Mim */}
+    {/* About me */}
     <section id="aboutme" className="scroll-mt-14 sm:scroll-mt-20">
       < AboutMe />
       < InfiniteIcons />
     </section>
 
-    {/* Contact - Contato*/}
+    {/* Contact*/}
     <Titulo  tipo={3}/>
     <section id="contact" className="scroll-mt-20">
       <Contact />
