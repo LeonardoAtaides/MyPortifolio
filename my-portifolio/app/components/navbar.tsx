@@ -21,7 +21,6 @@ export default function Navbar() {
 
   if (!mounted) return null
 
-  // Fechar menu quando clicar em um link
   const handleLinkClick = () => {
     setIsMenuOpen(false)
   }
@@ -31,7 +30,7 @@ export default function Navbar() {
             backgroundColor: theme === "dark" ? "#000" : "var(--bg)",
           }}>
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 py-2" >
-        {/* Logo - Esquerda */}
+        {/* Logo*/}
         <a href="#" className="z-50">
           <img
             src="/assets/Logo.png"
@@ -40,7 +39,7 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Menu Mobile - Botão Hamburger */}
+        {/* Menu Mobile */}
         <div className="md:hidden flex items-center gap-4">
           {/* Idioma - Mobile */}
           <div className="relative">
@@ -110,7 +109,7 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Botão Hamburguer */}
+          {/* Botão*/}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="cursor-pointer hover:opacity-80 transition z-50"

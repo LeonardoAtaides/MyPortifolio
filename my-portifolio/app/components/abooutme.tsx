@@ -55,7 +55,6 @@ export default function AboutMe() {
 
   return (
     <section className="w-full flex flex-col">
-      {/* ===== TÍTULO DINÂMICO ===== */}
        {on === 0 ? <Titulo tipo={1} /> : <Titulo tipo={2} />} 
 
     
@@ -105,7 +104,7 @@ export default function AboutMe() {
             </div>
           </div>
 
-          {/* ===== FACE 2 — CERTIFICAÇÕES ===== */}
+          {/* ===== CERTIFICAÇÕES ===== */}
           <div className="min-w-full">
             <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-12 2xl:gap-20">
                 <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px]

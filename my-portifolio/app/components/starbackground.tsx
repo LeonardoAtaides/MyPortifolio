@@ -15,13 +15,11 @@ export default function StarBackground() {
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [stars, setStars] = useState<Star[]>([])
-
-  // Garante que só renderiza no cliente
+  
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  // Gera estrelas apenas no dark mode (APÓS mounted)
   useEffect(() => {
     if (!mounted || theme !== "dark") {
       setStars([])
