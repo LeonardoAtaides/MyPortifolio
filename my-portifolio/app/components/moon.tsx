@@ -85,7 +85,7 @@ export default function Moon() {
             transform: `translateY(${offsetY}px)`,
           }}
         >
-          {/* LUA — DARK */}
+          {/* MOON — DARK */}
           {theme === "dark" && (
             <div className="relative w-8 h-8 rounded-full bg-[#ddd9d9]
               shadow-[0_0_70px_rgba(255,255,255,0.3)] overflow-hidden">
@@ -95,7 +95,7 @@ export default function Moon() {
             </div>
           )}
 
-          {/* SOL — LIGHT */}
+          {/* SUN — LIGHT */}
           {theme === "light" && (
             <div className="relative w-8 h-8 rounded-full bg-yellow-400
               shadow-[0_0_60px_rgba(255,200,0,0.8)]">

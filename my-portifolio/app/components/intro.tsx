@@ -6,7 +6,7 @@ interface IntroProps {
   onFinish: () => void
 }
 
-// Versão Desktop
+// Version Desktop
 const IntroDesktop: React.FC<IntroProps> = ({ onFinish }) => {
   const [phase, setPhase] = useState<number>(0)
   const [fadeOut, setFadeOut] = useState<boolean>(false)
@@ -95,7 +95,7 @@ const IntroDesktop: React.FC<IntroProps> = ({ onFinish }) => {
   )
 }
 
-// Versão Mobile
+// Version Mobile
 const IntroMobile: React.FC<IntroProps> = ({ onFinish }) => {
   const [phase, setPhase] = useState<number>(0)
   const [fadeOut, setFadeOut] = useState<boolean>(false)

@@ -81,7 +81,7 @@ export default function ProjectsCarousel() {
 
   return (
     <div className="relative z-20 mt-12 pb-20">
-      {/* COMETA SUPERIOR */}
+      {/* COMET UPPER*/}
       <img
         src={
           theme === "dark"
@@ -100,7 +100,7 @@ export default function ProjectsCarousel() {
         />
       )}
 
-      {/* CONTAINER DO CARROSSEL */}
+      {/* CONTAINER CARROSSEL */}
       <div className="px-2" style={{ backgroundColor: bgColor }}>
         <div
           ref={carouselRef}
@@ -150,7 +150,7 @@ export default function ProjectsCarousel() {
         </div>
       </div>
 
-      {/* COMETA INFERIOR */}
+      {/* COMET BOTTOM */}
       <img
         src={
           theme === "dark"
@@ -161,7 +161,7 @@ export default function ProjectsCarousel() {
         alt="Cometa inferior"
       />
 
-      {/* BOTÕES DE NEXT */}
+      {/* BUTTONS DE NEXT */}
       <div className="relative bottom-16 left-[70%] z-50 flex gap-3 2xl:hidden">
         <button
           onClick={scrollPrev}

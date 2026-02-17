@@ -44,7 +44,7 @@ export default function Contact() {
 
   return (
     <footer className="relative z-20 mt-12">
-      {/* Cometa */}
+      {/* === COMET === */}
       <img
         src={
           theme === "dark"
@@ -55,7 +55,7 @@ export default function Contact() {
         alt="Cometa"
       />
 
-      {/* Barra verde apenas no light */}
+      {/* green bar only on light */}
       {theme === "light" && (
         <img
           src="/assets/Grama.svg"
@@ -72,12 +72,12 @@ export default function Contact() {
         }}
       >
         <div className="w-full flex flex-col items-center text-center">
-          {/* Texto */}
+          {/* Text */}
           <h2 className="text-[17px] sm:text-lg md:text-lg lg:text-[22px] xl:text-[26px] 2xl:text-3xl max-w-[90%] sm:max-w-[880px] text-justify m-8 sm:mx-8 sm:my-2 xl:m-5">
             {t.contact.description}
           </h2>
 
-          {/* Ícones */}
+          {/* Ícons */}
           <div className="flex justify-center gap-8 sm:gap-20 my-5 sm:my-8 md:my-10 lg:my-12 xl:my-10 2xl:my-12">
             {socialLinks.map(({ icon: Icon, href }, index) => (
               <a

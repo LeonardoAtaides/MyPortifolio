@@ -32,7 +32,7 @@ export function ProjectCard({
   
   return (
     <div className="w-[90vw] max-w-sm sm:w-full">
-      {/* TÍTULO */}
+      {/* TÍTLE*/}
       <div className="mb-2">
         <h2 className="uppercase text-xl font-semibold text-white">
           {face === 0 ? title : t.card.title}
@@ -67,7 +67,7 @@ export function ProjectCard({
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${face * 100}%)` }}
         >
-          {/* CAPA */}
+          {/* COVER*/}
           <div className="min-w-full h-[420px]">
             {link ? (
               <a
@@ -94,7 +94,7 @@ export function ProjectCard({
             )}
           </div>
 
-          {/* DESCRIÇÃO */}
+          {/* DESCRIPTION */}
           <div
             className="min-w-full h-[420px] p-5 text-white/90 flex flex-col justify-between"
             style={{ backgroundColor: backBg }}
@@ -131,7 +131,7 @@ export function ProjectCard({
         </div>
       </div>
 
-      {/* INDICADORES */}
+      {/* INDICATORS */}
       <div className="flex justify-center gap-2  mt-6 sm:mt-3">
         {[0, 1].map((i) => (
           <button

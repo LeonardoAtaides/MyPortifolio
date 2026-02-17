@@ -78,7 +78,7 @@ export default function AboutMe() {
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${on * 100}%)` }}
         >
-          {/* ===== FACE 1 — SOBRE MIM ===== */}
+          {/* ===== ABOUT ME ===== */}
           <div className="min-w-full">
             <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-12 2xl:gap-20">
 
@@ -102,7 +102,7 @@ export default function AboutMe() {
             </div>
           </div>
 
-          {/* ===== CERTIFICAÇÕES ===== */}
+          {/* ===== CERTIFICATIONS===== */}
           <div className="min-w-full">
             <div className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-12 2xl:gap-20">
                 <div className="w-[313px] sm:w-[341px] h-[300px] sm:h-[327px]
@@ -153,7 +153,7 @@ export default function AboutMe() {
         </div>
       </div>
 
-      {/* ===== INDICADORES ===== */}
+      {/* ===== INDICATORS ===== */}
       <div className="flex justify-center gap-2 mt-10">
         {[0, 1].map((i) => (
           <button

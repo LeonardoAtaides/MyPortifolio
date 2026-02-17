@@ -109,7 +109,7 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Botão*/}
+          {/* Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="cursor-pointer hover:opacity-80 transition z-50"
@@ -139,7 +139,7 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* Ações Desktop */}
+        {/* Actions Desktop */}
         <div className="hidden md:flex items-center gap-6">
 
 
@@ -156,14 +156,14 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Idioma */}
+          {/* Language */}
           <div className="relative">
             <Globe
               className="w-6 h-6 cursor-pointer hover:opacity-80 transition relative z-10 order-1"
               onClick={() => setOpenLang((prev) => !prev)}
             />
 
-            {/* Menu flutuante */}
+            {/* Menu floating */}
             <div
               className={`
                 absolute top-full -right-[35px] mt-2
