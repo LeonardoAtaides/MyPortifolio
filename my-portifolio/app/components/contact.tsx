@@ -59,7 +59,7 @@ export default function Contact() {
       {theme === "light" && (
         <img
           src="/assets/BarraVerde.svg"
-          className="absolute w-screen max-w-none"
+          className="absolute top-[17px] left-0 w-screen max-w-none block"
           alt="Barra verde"
         />
       )}
