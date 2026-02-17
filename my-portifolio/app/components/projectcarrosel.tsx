@@ -54,30 +54,45 @@ export default function ProjectsCarousel() {
 
   const bgColor = theme === "dark" ? "#0F0F0F" : "var(--earth)"
 
-  const scrollNext = () => {
-    if (!carouselRef.current) return
+const scrollNext = () => {
+  if (!carouselRef.current) return
 
-    const container = carouselRef.current
-    const scrollAmount = container.clientWidth
+  const container = carouselRef.current
+  const scrollAmount = container.clientWidth
 
+  const maxScrollLeft = container.scrollWidth - container.clientWidth
+
+  if (container.scrollLeft >= maxScrollLeft - 5) {
+    container.scrollTo({
+      left: 0,
+      behavior: "smooth",
+    })
+  } else {
     container.scrollBy({
       left: scrollAmount,
       behavior: "smooth",
     })
   }
+}
 
-  const scrollPrev = () => {
-    if (!carouselRef.current) return
+const scrollPrev = () => {
+  if (!carouselRef.current) return
 
-    const container = carouselRef.current
-    const scrollAmount = container.clientWidth
+  const container = carouselRef.current
+  const scrollAmount = container.clientWidth
 
+  if (container.scrollLeft <= 5) {
+    container.scrollTo({
+      left: container.scrollWidth,
+      behavior: "smooth",
+    })
+  } else {
     container.scrollBy({
       left: -scrollAmount,
       behavior: "smooth",
     })
   }
-
+}
 
   return (
     <div className="relative z-20 mt-12 pb-20">
