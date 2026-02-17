@@ -58,7 +58,7 @@ export default function Contact() {
       {/* Barra verde apenas no light */}
       {theme === "light" && (
         <img
-          src="/assets/BarraVerde.svg"
+          src="/assets/Grama.svg"
           className="absolute w-full"
           alt="Barra verde"
         />
