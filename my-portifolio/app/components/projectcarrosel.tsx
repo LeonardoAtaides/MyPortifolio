@@ -121,18 +121,18 @@ const scrollPrev = () => {
           ref={carouselRef}
           className="
           flex
-          2xl:grid
-          2xl:grid-cols-4
+          3xl:grid
+          3xl:grid-cols-4
           overflow-x-hidden
-          2xl:overflow-visible
+          3xl:overflow-visible
           snap-x snap-mandatory
-          2xl:snap-none
+          3xl:snap-none
           scroll-smooth
           gap-4
           md:gap-14
           lg:gap-0
           xl:gap-0
-          2xl:gap-0
+          3xl:gap-12
           py-6
           scrollbar-hide
           justify-start
@@ -146,11 +146,10 @@ const scrollPrev = () => {
               className="
               snap-center
               flex-shrink-0
-              w-full
               md:w-[720px]
-              lg:w-1/2
-              xl:w-1/2
-              2xl:w-auto
+              lg:w-1/2  
+              2xl:w-1/2
+              3xl:!w-full
               flex
               justify-center
               "
@@ -177,7 +176,7 @@ const scrollPrev = () => {
       />
 
       {/* BUTTONS DE NEXT */}
-      <div className="relative bottom-16 left-[70%] z-50 flex gap-3 2xl:hidden">
+      <div className="relative bottom-16  2xl:bottom-30 left-[70%] z-50 flex gap-3 3xl:hidden">
         <button
           onClick={scrollPrev}
           className="
