@@ -146,6 +146,7 @@ const scrollPrev = () => {
               className="
               snap-center
               flex-shrink-0
+              w-full
               md:w-[720px]
               lg:w-1/2  
               2xl:w-1/2
