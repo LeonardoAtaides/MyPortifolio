@@ -24,8 +24,6 @@
   }
 }
 
-html, body {overflow-x: clip; margin: 0; padding: 0;}
-
 html {
   scroll-behavior: smooth;
 }
