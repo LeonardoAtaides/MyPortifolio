@@ -92,3 +92,32 @@ body {
 }
 
 
+
+/* Reset no Safari iOS */
+@supports (-webkit-touch-callout: none) {
+  img[src*=".svg"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    -webkit-object-fit: cover !important;
+    vertical-align: top !important;
+    
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+    -webkit-padding-start: 0 !important;
+    -webkit-padding-end: 0 !important;
+  }
+
+  div:has(> img[src*=".svg"]) {
+    line-height: 0;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
