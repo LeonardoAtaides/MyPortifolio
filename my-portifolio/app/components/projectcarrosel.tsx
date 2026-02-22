@@ -108,13 +108,11 @@ const scrollPrev = () => {
       />
 
       {theme === "light" && (
-      <div style={{ backgroundColor: "#2BA016" }}>
         <img
           src="/assets/Grama.svg"
-          className="w-full top-0 absolute block"
+          className="absolute top-0 w-full min-w-full block"
           alt="Barra verde"
         />
-      </div>
       )}
 
       {/* CONTAINER CARROSSEL */}
