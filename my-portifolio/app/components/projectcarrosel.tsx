@@ -110,7 +110,7 @@ const scrollPrev = () => {
       {theme === "light" && (
         <img
           src="/assets/Grama.svg"
-          className="absolute inset-x-0 top-0 w-full block"
+          className="absolute inset-x-0 top-0 w-screen block pointer-events-none"
           alt="Barra verde"
         />
       )}
