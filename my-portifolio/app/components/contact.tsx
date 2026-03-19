@@ -4,7 +4,7 @@ import {
   SiInstagram,
   SiWhatsapp,
   SiLinkedin,
-  SiGmail,
+  SiGithub,
 } from "react-icons/si"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
@@ -25,8 +25,8 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/leonardo-ataides-a87a04273/",
   },
   {
-    icon: SiGmail,
-    href: "mailto:leonardoataidesjesus@gmail.com",
+    icon: SiGithub,
+    href: "https://github.com/LeonardoAtaides",
   },
 ]
 
