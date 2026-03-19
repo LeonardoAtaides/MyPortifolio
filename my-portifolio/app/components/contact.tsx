@@ -1,7 +1,7 @@
 "use client"
 
 import {
-  SiInstagram,
+  SiGmail,
   SiWhatsapp,
   SiLinkedin,
   SiGithub,
@@ -13,8 +13,8 @@ import { translations } from "@/lib/translations"
 
 const socialLinks = [
   {
-    icon: SiInstagram,
-    href: "https://www.instagram.com/_.ataides._/",
+    icon: SiGmail,
+    href: "mailto:ataidesdev@gmail.com",
   },
   {
     icon: SiWhatsapp,
