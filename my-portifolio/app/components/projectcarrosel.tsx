@@ -135,47 +135,68 @@ const scrollPrev = () => {
           ref={carouselRef}
           className="
           flex
-          3xl:grid
-          3xl:grid-cols-4
           overflow-x-hidden
-          3xl:overflow-visible
           snap-x snap-mandatory
-          3xl:snap-none
           scroll-smooth
           gap-4
           md:gap-14
           lg:gap-0
           xl:gap-0
-          3xl:gap-12
           py-6
           scrollbar-hide
           justify-start
-          xl:justify-between
           "
           style={{ backgroundColor: bgColor }}
         >
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="
-              snap-center
-              flex-shrink-0
-              w-full
-              md:w-[720px]
-              lg:w-1/2  
-              2xl:w-1/2
-              3xl:!w-full
-              flex
-              justify-center
-              "
-            >
-              <ProjectCard
-                {...project}
-                title={t.projects[index].title}
-                description={t.projects[index].description}
-              />
-            </div>
-          ))}
+          {/* 3xl: páginas de 4 cards — cada página ocupa 100% do container */}
+          <div className="hidden 3xl:contents">
+            {Array.from({ length: Math.ceil(projects.length / 4) }, (_, pi) =>
+              projects.slice(pi * 4, pi * 4 + 4)
+            ).map((page, pi) => (
+              <div
+                key={`page-${pi}`}
+                className="w-full shrink-0 snap-start flex"
+              >
+                {page.map((project, i) => {
+                  const idx = pi * 4 + i
+                  return (
+                    <div key={idx} className="w-1/4 flex justify-center">
+                      <ProjectCard
+                        {...project}
+                        title={t.projects[idx].title}
+                        description={t.projects[idx].description}
+                      />
+                    </div>
+                  )
+                })}
+              </div>
+            ))}
+          </div>
+
+          {/* Telas menores: cards individuais */}
+          <div className="contents 3xl:hidden">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="
+                snap-start
+                shrink-0
+                w-full
+                md:w-180
+                lg:w-1/2
+                2xl:w-1/2
+                flex
+                justify-center
+                "
+              >
+                <ProjectCard
+                  {...project}
+                  title={t.projects[index].title}
+                  description={t.projects[index].description}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -191,7 +212,7 @@ const scrollPrev = () => {
       />
 
       {/* BUTTONS DE NEXT */}
-      <div className="relative bottom-16  2xl:bottom-30 left-[70%] z-50 flex gap-3 3xl:hidden">
+      <div className="relative bottom-16 2xl:bottom-30 left-[70%] z-50 flex gap-3">
         <button
           onClick={scrollPrev}
           className="
