@@ -36,6 +36,20 @@ const projects = [
     link: "https://www.vidracarianovohorizonte.com.br/home.html",
     technologies: ["HTML", "CSS", "JAVASCRIPT", "FIGMA"],
   },
+  {
+    image: "/assets/Project-K30.png",
+    backBg: "#2EB648",
+    shadowColor: "rgba(46,182,72,0.6)",
+    link: "https://k30-palmitos-landing.vercel.app",
+    technologies: ["VITE.JS", "TAILWIND", "TYPESCRIPT", "FIGMA"],
+  }, 
+  {
+    image: "/assets/Project-Bud.png",
+    backBg: "#122B4E",
+    shadowColor: "rgba(18,43,78,0.6)",
+    link: "https://mgabudgets.vercel.app",
+    technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
+  },  
 ]
 
 export default function ProjectsCarousel() {
@@ -62,7 +76,7 @@ const scrollNext = () => {
 
   const maxScrollLeft = container.scrollWidth - container.clientWidth
 
-  if (container.scrollLeft >= maxScrollLeft - 5) {
+  if (container.scrollLeft >= maxScrollLeft - 6) {
     container.scrollTo({
       left: 0,
       behavior: "smooth",
@@ -81,7 +95,7 @@ const scrollPrev = () => {
   const container = carouselRef.current
   const scrollAmount = container.clientWidth
 
-  if (container.scrollLeft <= 5) {
+  if (container.scrollLeft <= 6) {
     container.scrollTo({
       left: container.scrollWidth,
       behavior: "smooth",

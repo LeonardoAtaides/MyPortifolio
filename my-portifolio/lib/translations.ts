@@ -21,7 +21,7 @@ export const translations = {
     },
     aboutme: {
         myhistory1:"Atualmente, sou estudante do curso de Ciências da Computação no CEUB, tenho 20 anos e sou apaixonado por transformar ideias em soluções úteis que gerem valor e impacto real. Me dedico e sempre busco evoluir por meio do estudo e da prática diária.",
-        myhistory2:"Por meio de projetos freelancers já são mais de 4 desenvolvidos, sozinho e em colaboração sigo em constante busca por novos aprendizados com o objetivo de me tornar um desenvolvedor Full Stack, ampliando minha visão técnica e minha capacidade de entregar soluções completas."
+        myhistory2:"Por meio de projetos freelancers já são mais de 6 desenvolvidos, sozinho e em colaboração sigo em constante busca por novos aprendizados com o objetivo de me tornar um desenvolvedor Full Stack, ampliando minha visão técnica e minha capacidade de entregar soluções completas."
     },
     contact:{
         description:"E aí, despertou interesse no meu trabalho? Entre em contato comigo através das minhas redes sociais. Será um prazer conversar e transformar ideias em projetos!",
@@ -47,7 +47,19 @@ export const translations = {
         title: "Landing Page",
         description:
           "Esta landing page foi desenvolvida para uma vidraçaria com o objetivo de apresentar sua história, serviços e canais de contato de forma clara e estratégica. O projeto contou com um design moderno e interativo, focado na usabilidade e na melhor experiência do usuário, facilitando a navegação e o acesso às informações.",
-      },],
+      },
+      {
+      title: "Landing Page",
+      description:
+      "Esta landing page foi desenvolvida para uma distribuidora de palmitos, apresentando seus produtos. O projeto foi construído com foco em um design moderno, responsivo e intuitivo. Além de valorizar a identidade visual da marca, a página foi otimizada para facilitar o acesso às informações, incentivar o contato comercial e transmitir credibilidade aos clientes.",
+      },
+      {
+      title: "Sistema de Orçamentos",
+      description:
+      "Este sistema de orçamentos foi desenvolvido para a empresa de turismo MGA Tour como um projeto interno durante meu estágio, com o objetivo de otimizar o processo de criação, gerenciamento e envio de orçamentos aos clientes. A aplicação foi projetada com uma interface moderna, intuitiva e de fácil utilização, priorizando a usabilidade. Além de agilizar o atendimento.",
+      },
+    
+    ],
     card:{
         title:"Informações",
         subtitle:"Tecnologias usadas:"
@@ -99,7 +111,19 @@ export const translations = {
         title: "Landing Page",
         description:
           "This landing page was developed for a glass company with the goal of presenting its history, services, and contact channels in a clear and strategic way. The project featured a modern and interactive design, focused on usability and the best user experience, facilitating navigation and access to information.",
-      },],
+      },
+      {
+        title: "Landing Page",
+        description:
+          "This landing page was developed for a heart-of-palm distributor to showcase its products. The project was built with a focus on a modern, responsive, and intuitive design. In addition to highlighting the brand's visual identity, the page was optimized to facilitate access to information, encourage business inquiries, and convey trustworthiness to customers.",
+      },
+      {
+        title: "Budgeting System",
+        description:
+          "This quote management system was developed for the tourism company MGA Tour as an internal project during my internship, aiming to improve the process of creating, managing, and sending quotes to clients. The application features a modern, intuitive, and user-friendly interface that prioritizes usability, in addition to streamlining customer service.",
+      },
+    
+    ],
       card:{
         title:"Information",
         subtitle:"Technologies used:"
