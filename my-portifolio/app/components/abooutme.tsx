@@ -153,7 +153,7 @@ export default function AboutMe() {
         </div>
       </div>
 
-      {/* ===== INDICATORS ===== */}
+      {/* ===== INDICZTOR ===== */}
       <div className="flex justify-center gap-2 mt-10">
         {[0, 1].map((i) => (
           <button
