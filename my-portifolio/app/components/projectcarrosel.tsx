@@ -9,11 +9,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
-    image: "/assets/Project-MP.png",
+    image: "/assets/Project-U.png",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
-    link: "https://mptelecom.com.br",
-    technologies: ["REACT", "TAILWIND", "JAVASCRIPT", "FIGMA"],
+    link: "https://company.usportstore.com",
+    technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
   },  
   {
     image: "/assets/Project-Malvader.png",

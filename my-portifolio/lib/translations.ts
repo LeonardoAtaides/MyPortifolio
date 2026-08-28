@@ -31,7 +31,7 @@ export const translations = {
       {
         title: "Landing Page",
         description:
-          "Esta landing page foi desenvolvida para uma empresa de fibra óptica, com o objetivo de apresentar seus serviços. O projeto conta com um design moderno e clean, focado em conversão, pensado para prender a atenção do visitante, estimular o interesse e conduzir o cliente à tomada de decisão.",
+          "Esta landing page foi desenvolvida para a Usports durante o período da Copa, com o objetivo de divulgar e facilitar a compra de camisetas personalizadas para equipes. O projeto conta com um design moderno e atrativo, pensado para destacar os produtos, despertar o interesse dos visitantes e incentivar a solicitação de orçamentos.",
       },  
       {
         title: "Projeto Acadêmico",
@@ -95,7 +95,7 @@ export const translations = {
       {
         title: "Landing Page",
         description:
-          "This landing page was developed for a fiber optic company to showcase its services. The project features a modern and clean design, focused on conversion, conceived to capture the visitor's attention, stimulate interest, and guide the customer towards a decision.",
+          "This landing page was developed for Usports during the World Cup period to promote and facilitate the purchase of custom team jerseys. The project features a modern, attractive design intended to showcase the products, spark visitor interest, and encourage quote requests.",
       },    
       {
         title: "Academic Project",
