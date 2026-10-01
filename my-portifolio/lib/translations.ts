@@ -20,8 +20,8 @@ export const translations = {
       buttontwo:"Fale Comigo",
     },
     aboutme: {
-        myhistory1:"Atualmente, sou estudante do curso de Ciências da Computação no CEUB, tenho 20 anos e sou apaixonado por transformar ideias em soluções úteis que gerem valor e impacto real. Me dedico e sempre busco evoluir por meio do estudo e da prática diária.",
-        myhistory2:"Por meio de projetos freelancers já são mais de 6 desenvolvidos, sozinho e em colaboração sigo em constante busca por novos aprendizados com o objetivo de me tornar um desenvolvedor Full Stack, ampliando minha visão técnica e minha capacidade de entregar soluções completas."
+        myhistory1:"Atualmente, sou estudante do curso de Ciências da Computação no CEUB, tenho 21 anos e sou apaixonado por transformar ideias em soluções úteis que gerem valor e impacto real. Me dedico e sempre busco evoluir por meio do estudo e da prática diária.",
+        myhistory2:"Por meio de projetos freelancers já são mais de 8 desenvolvidos, sozinho e em colaboração sigo em constante busca por novos aprendizados com o objetivo de me tornar um desenvolvedor Full Stack, ampliando minha visão técnica e minha capacidade de entregar soluções completas."
     },
     contact:{
         description:"E aí, despertou interesse no meu trabalho? Entre em contato comigo através das minhas redes sociais. Será um prazer conversar e transformar ideias em projetos!",
