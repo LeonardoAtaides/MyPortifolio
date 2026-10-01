@@ -34,7 +34,7 @@ export default function Presentation() {
 
       <div className="flex justify-center gap-10 sm:gap-12 md:gap-14 lg:gap-15 sm:mt-10 md:mt-5 items-center">
         <a
-          href="/cv-leonardo-ataides.pdf"
+          href="/cv-leonardo-ataides-santos.pdf"
           download
           className="w-38 sm:w-40 py-3 rounded-full transition duration-300 ease-out hover:scale-105 active:scale-95 uppercase"
           style={{ backgroundColor: buttonBg }}
