@@ -58,7 +58,11 @@ export const translations = {
       description:
       "Este sistema de orçamentos foi desenvolvido para a empresa de turismo MGA Tour como um projeto interno durante meu estágio, com o objetivo de otimizar o processo de criação, gerenciamento e envio de orçamentos aos clientes. A aplicação foi projetada com uma interface moderna, intuitiva e de fácil utilização, priorizando a usabilidade. Além de agilizar o atendimento.",
       },
-    
+      {
+      title: "linkBio WhatsApp",
+      description:
+      "Desenvolvi este site com o objetivo de facilitar o contato com os clientes pelo WhatsApp, direcionando cada atendimento para o grupo correspondente à sua região.",
+      },   
     ],
     card:{
         title:"Informações",
@@ -121,6 +125,11 @@ export const translations = {
         title: "Budgeting System",
         description:
           "This quote management system was developed for the tourism company MGA Tour as an internal project during my internship, aiming to improve the process of creating, managing, and sending quotes to clients. The application features a modern, intuitive, and user-friendly interface that prioritizes usability, in addition to streamlining customer service.",
+      },
+      {
+        title: "linkBio WhatsApp",
+        description:
+          "I developed this website to facilitate contact with clients via WhatsApp, directing each inquiry to the group corresponding to their region.",
       },
     
     ],

@@ -50,6 +50,14 @@ const projects = [
     link: "https://mgabudgets.vercel.app",
     technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
   },  
+
+    {
+    image: "/assets/Project-Obj.png",
+    backBg: "#223460",
+    shadowColor: "rgba(18,43,78,0.6)",
+    link: "https://objetivow.unipaperbsb.com.br",
+    technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
+  },  
 ]
 
 export default function ProjectsCarousel() {
