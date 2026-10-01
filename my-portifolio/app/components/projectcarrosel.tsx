@@ -9,27 +9,31 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
+    id: "usports",
     image: "/assets/Project-U.png",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
     link: "https://company.usportstore.com",
     technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
-  },  
+  },
   {
+    id: "banking-system",
     image: "/assets/Project-Malvader.png",
     backBg: "#034163",
     shadowColor: "rgba(3,65,99,0.8)",
     link: "https://www.linkedin.com/posts/leonardo-ataides-a87a04273_mais-um-projeto-conclu%C3%ADdo-com-sucesso-activity-7401412714566246401-4cii?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELkCQcBJOV3ixqi502AeZ8ycw_tXu8yov8",
     technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT", "FIGMA", "MYSQL", "NODE.JS"],
-  }, 
+  },
   {
+    id: "ui-ux",
     image: "/assets/Project-UI.png",
     backBg: "#000",
     shadowColor: "rgba(0,0,0,0.6)",
     link: "https://www.figma.com/design/cYWeMd4vXrL2lPPn4JSdtj/GERAL-UX-E-UI?m=auto&t=cQ7b7bqqziC2fWXp-6",
     technologies: ["FIGMA", "PS TOUCH"],
-  },   
+  },
   {
+    id: "vidracaria",
     image: "/assets/Project-NH.png",
     backBg: "#182C48",
     shadowColor: "rgba(24,44,72,0.8)",
@@ -37,27 +41,30 @@ const projects = [
     technologies: ["HTML", "CSS", "JAVASCRIPT", "FIGMA"],
   },
   {
+    id: "k30",
     image: "/assets/Project-K30.png",
     backBg: "#2EB648",
     shadowColor: "rgba(46,182,72,0.6)",
     link: "https://k30-palmitos-landing.vercel.app",
     technologies: ["VITE.JS", "TAILWIND", "TYPESCRIPT", "FIGMA"],
-  }, 
+  },
   {
+    id: "mga-budgets",
     image: "/assets/Project-Bud.png",
     backBg: "#122B4E",
     shadowColor: "rgba(18,43,78,0.6)",
     link: "https://mgabudgets.vercel.app",
     technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
-  },  
+  },
 
     {
+    id: "linkbio",
     image: "/assets/Project-Obj.png",
     backBg: "#223460",
-    shadowColor: "rgba(18,43,78,0.6)",
+    shadowColor: "rgba(34,52,96,0.6)",
     link: "https://objetivow.unipaperbsb.com.br",
     technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
-  },  
+  },
 ]
 
 export default function ProjectsCarousel() {
@@ -65,6 +72,13 @@ export default function ProjectsCarousel() {
   const [mounted, setMounted] = useState(false)
   const { language } = useLanguage()
   const t = translations[language]
+
+  const sortedProjects = [...t.projects]
+    .sort((a, b) => a.order - b.order)
+    .map((content) => {
+      const visual = projects.find((p) => p.id === content.id)!
+      return { ...visual, ...content }
+    })
 
   const carouselRef = useRef<HTMLDivElement | null>(null)
 
@@ -158,34 +172,27 @@ const scrollPrev = () => {
         >
           {/* 3xl: páginas de 4 cards — cada página ocupa 100% do container */}
           <div className="hidden 3xl:contents">
-            {Array.from({ length: Math.ceil(projects.length / 4) }, (_, pi) =>
-              projects.slice(pi * 4, pi * 4 + 4)
+            {Array.from({ length: Math.ceil(sortedProjects.length / 4) }, (_, pi) =>
+              sortedProjects.slice(pi * 4, pi * 4 + 4)
             ).map((page, pi) => (
               <div
                 key={`page-${pi}`}
                 className="w-full shrink-0 snap-start flex"
               >
-                {page.map((project, i) => {
-                  const idx = pi * 4 + i
-                  return (
-                    <div key={idx} className="w-1/4 flex justify-center">
-                      <ProjectCard
-                        {...project}
-                        title={t.projects[idx].title}
-                        description={t.projects[idx].description}
-                      />
-                    </div>
-                  )
-                })}
+                {page.map((project) => (
+                  <div key={project.id} className="w-1/4 flex justify-center">
+                    <ProjectCard {...project} />
+                  </div>
+                ))}
               </div>
             ))}
           </div>
 
           {/* Telas menores: cards individuais */}
           <div className="contents 3xl:hidden">
-            {projects.map((project, index) => (
+            {sortedProjects.map((project) => (
               <div
-                key={index}
+                key={project.id}
                 className="
                 snap-start
                 shrink-0
@@ -197,11 +204,7 @@ const scrollPrev = () => {
                 justify-center
                 "
               >
-                <ProjectCard
-                  {...project}
-                  title={t.projects[index].title}
-                  description={t.projects[index].description}
-                />
+                <ProjectCard {...project} />
               </div>
             ))}
           </div>
