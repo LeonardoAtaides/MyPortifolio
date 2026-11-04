@@ -102,7 +102,7 @@ export const translations = {
       buttontwo:"Talk To me",
     },
     aboutme: {
-        myhistory1:"Currently, I am a Computer Science student at CEUB, I am 20 years old, and I am passionate about transforming ideas into useful solutions that generate real value and impact. I am dedicated and always strive to improve through study and daily practice.",
+        myhistory1:"Currently, I am a Computer Science student at CEUB, I am 21 years old, and I am passionate about transforming ideas into useful solutions that generate real value and impact. I am dedicated and always strive to improve through study and daily practice.",
         myhistory2:"Through freelance projects, I have already developed more than 4, both alone and in collaboration. I am constantly seeking new learning opportunities with the goal of becoming a Full Stack developer, expanding my technical vision and my ability to deliver complete solutions."
     },
      contact:{
