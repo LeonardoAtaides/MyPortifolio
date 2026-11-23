@@ -30,7 +30,7 @@ export const translations = {
     projects: [
       {
         id: "usports",
-        order: 2,
+        order: 5,
         title: "Landing Page",
         description:
           "Esta landing page foi desenvolvida para a Usports durante o período da Copa, com o objetivo de divulgar e facilitar a compra de camisetas personalizadas para equipes. O projeto conta com um design moderno e atrativo, pensado para destacar os produtos, despertar o interesse dos visitantes e incentivar a solicitação de orçamentos.",
@@ -79,7 +79,7 @@ export const translations = {
       },
       {
       id: "mgatour",
-      order: 5,
+      order: 2,
       title: "Landing Page",
       description:
       "Desenvolvi essa landing page para a empresa de turismo MGA Tour, com o objetivo de apresentar seus serviços e facilitar o contato com os clientes.",
@@ -119,7 +119,7 @@ export const translations = {
      projects: [
       {
         id: "usports",
-        order: 2,
+        order: 5,
         title: "Landing Page",
         description:
           "This landing page was developed for Usports during the World Cup period to promote and facilitate the purchase of custom team jerseys. The project features a modern, attractive design intended to showcase the products, spark visitor interest, and encourage quote requests.",
@@ -168,7 +168,7 @@ export const translations = {
       },
       {
         id: "mgatour",
-        order: 5,
+        order: 2,
         title: "Landing Page",
         description:
           "I developed this landing page for the tourism company MGA Tour, with the objective of presenting their services and facilitating contact with clients.",
