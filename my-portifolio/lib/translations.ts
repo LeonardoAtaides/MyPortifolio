@@ -37,7 +37,7 @@ export const translations = {
       },
       {
         id: "banking-system",
-        order: 5,
+        order: 8,
         title: "Projeto Acadêmico",
         description:
           "Este projeto acadêmico foi feito por mim e mais 3 colegas de classe, onde desenvolvemos um sistema bancário completo, de forma bem simples mas com um ótimo visual e focado na usabilidade, tendo acesso multinível, um projeto totalmente completo.",
@@ -79,10 +79,10 @@ export const translations = {
       },
       {
       id: "mgatour",
-      order: 8,
-      title: "MGA Tour",
+      order: 5,
+      title: "Landing Page",
       description:
-      "Desenvolvi este site para a empresa de turismo MGA Tour, com o objetivo de apresentar seus serviços e facilitar o contato com os clientes.",
+      "Desenvolvi essa landing page para a empresa de turismo MGA Tour, com o objetivo de apresentar seus serviços e facilitar o contato com os clientes.",
       },
     ],
     card:{
@@ -126,7 +126,7 @@ export const translations = {
       },
       {
         id: "banking-system",
-        order: 5,
+        order: 8,
         title: "Academic Project",
         description:
           "This academic project was done by me and 3 other classmates, where we developed a complete banking system, in a very simple way but with a great visual design and focused on usability, with multi-level access, a totally complete project.",
@@ -168,10 +168,10 @@ export const translations = {
       },
       {
         id: "mgatour",
-        order: 8,
-        title: "MGA Tour",
+        order: 5,
+        title: "Landing Page",
         description:
-          "I developed this website for the tourism company MGA Tour, with the objective of presenting their services and facilitating contact with clients.",
+          "I developed this landing page for the tourism company MGA Tour, with the objective of presenting their services and facilitating contact with clients.",
       },
     ],
       card:{
