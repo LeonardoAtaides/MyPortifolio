@@ -65,6 +65,15 @@ const projects = [
     link: "https://objetivow.unipaperbsb.com.br",
     technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT"],
   },
+
+      {
+    id: "mgatour",
+    image: "/assets/Project-Mga.png",
+    backBg: "#BFA86D",
+    shadowColor: "rgba(191, 168, 109,0.6)",
+    link: "https://mga-tour-corp.vercel.app",
+    technologies: ["NEXT.JS", "TAILWIND", "TYPESCRIPT", "FIGMA","CLAUDE IA"],
+  },
 ]
 
 export default function ProjectsCarousel() {

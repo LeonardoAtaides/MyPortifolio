@@ -77,6 +77,13 @@ export const translations = {
       description:
       "Desenvolvi este site com o objetivo de facilitar o contato com os clientes pelo WhatsApp, direcionando cada atendimento para o grupo correspondente à sua região.",
       },
+      {
+      id: "mgatour",
+      order: 8,
+      title: "MGA Tour",
+      description:
+      "Desenvolvi este site para a empresa de turismo MGA Tour, com o objetivo de apresentar seus serviços e facilitar o contato com os clientes.",
+      },
     ],
     card:{
         title:"Informações",
@@ -159,7 +166,13 @@ export const translations = {
         description:
           "I developed this website to facilitate contact with clients via WhatsApp, directing each inquiry to the group corresponding to their region.",
       },
-
+      {
+        id: "mgatour",
+        order: 8,
+        title: "MGA Tour",
+        description:
+          "I developed this website for the tourism company MGA Tour, with the objective of presenting their services and facilitating contact with clients.",
+      },
     ],
       card:{
         title:"Information",
